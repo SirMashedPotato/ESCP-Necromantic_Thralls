@@ -28,7 +28,7 @@
 		<comps>
 			<li Class="CompProperties_Usable">
 				<useJob>UseArtifact</useJob>
-				<useLabel>Read tome</useLabel>
+				<useLabel>Read {0}</useLabel>
 			</li>
 		</comps>
 	</ThingDef>
