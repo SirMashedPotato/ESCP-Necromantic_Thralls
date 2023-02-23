@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+	<ESCP_NecromanticThralls_BookAlreadyRead>{0} already has the knowledge of what this tome contains.</ESCP_NecromanticThralls_BookAlreadyRead>
+	<ESCP_NecromanticThralls_KnowledgeGained>{0} has finished reading {1}, though the tome appears to have crumbled into dust.</ESCP_NecromanticThralls_KnowledgeGained>
+</LanguageData>

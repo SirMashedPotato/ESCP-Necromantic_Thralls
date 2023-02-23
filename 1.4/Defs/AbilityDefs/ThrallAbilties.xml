@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- ========== [ESCP_PlayerFactionBase_Industrial] ========== -->
+	<AbilityGroupDef>
+		<defName>ESCP_NecromanticThralls_Thrall</defName>
+		<cooldownTicks>300000</cooldownTicks>
+	</AbilityGroupDef>
+	<!-- ========== [ESCP_NecromanticThralls_CreateThrall] ========== -->
+	<AbilityDef>
+		<defName>ESCP_NecromanticThralls_CreateThrall</defName>
+		<label>create thrall</label>
+		<description>Puppeteer a fresh corpse, turning it into a thrall. Thralls feel no emotions, and have no needs. The connection will be severed if the controlling necromancer is downed or killed.</description>
+		<iconPath>UI/Abilities/ESCP_SloadCreateThrall</iconPath>
+		<groupDef>ESCP_NecromanticThralls_Thrall</groupDef>
+		<jobDef>CastAbilityOnThingMelee</jobDef>
+		<stunTargetWhileCasting>True</stunTargetWhileCasting>
+		<showPsycastEffects>False</showPsycastEffects>
+		<displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+		<statBases>
+
+		</statBases>
+		<comps>
+			<li Class="ESCP_Sload.CompProperties_SloadThrallCreate">
+				<skill>Intellectual</skill>
+				<hediff>ESCP_NecromanticThralls_Enthralled</hediff>
+				<disablerPrecept>ESCP_NecromanticThralls_ThrallsHeretical</disablerPrecept>
+				<levelRequirement>
+					<li>0</li>
+					<li>6</li>
+					<li>9</li>
+					<li>12</li>
+					<li>15</li>
+					<li>18</li>
+					<li>20</li>
+				</levelRequirement>
+				<thrallLimit>
+					<li>0</li>
+					<li>3</li>
+					<li>5</li>
+					<li>7</li>
+					<li>10</li>
+					<li>12</li>
+					<li>15</li>
+				</thrallLimit>
+				<overLevelsRequired>10</overLevelsRequired>
+				<extraPerOverLevel>1</extraPerOverLevel>
+			</li>
+		</comps>
+		<verbProperties>
+			<drawAimPie>False</drawAimPie>
+			<range>-1</range>
+			<warmupTime>10.0</warmupTime>
+			<verbClass>ESCP_Sload.Verb_CastAbilityTouch_SloadThrallCreate</verbClass>
+			<targetParams>
+				<canTargetItems>true</canTargetItems>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetAnimals>false</canTargetAnimals>
+				<canTargetHumans>false</canTargetHumans>
+				<canTargetMechs>false</canTargetMechs>
+				<mustBeSelectable>true</mustBeSelectable>
+				<mapObjectTargetsMustBeAutoAttackable>false</mapObjectTargetsMustBeAutoAttackable>
+			</targetParams>
+		</verbProperties>
+	</AbilityDef>
+</Defs>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<HediffDef>
+		<defName>ESCP_NecromanticThralls_Enthralled</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>necromantic thrall</label>
+		<description>A corpse puppeteered by a necromancer, using ancient Sloadic magic. While the corpse is technically alive again, the mind is barely conscious, and effectively simply an extension of its masters.\n\nDisables almost all needs and thoughts, as well as providing complete immunity to pain. While thralls will not improve skills, their skill level will not decay over time.</description>
+		<defaultLabelColor>(0.8, 0.6, 1.0)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<!--	Now, mostly, done through Harmony patches, because doing it this way apparently breaks shit -->
+		<disablesNeeds>
+			<!--
+			<li>Mood</li>
+			<li>Food</li>
+			<li>Rest</li>
+			<li>Joy</li>
+			<li>Beauty</li>
+			<li>Comfort</li>
+			<li>Outdoors</li>
+			<li>Indoors</li>
+			<li>DrugDesire</li>
+			<li>RoomSize</li>
+			<li MayRequire="Ludeon.RimWorld.Royalty">Authority</li>
+			<li MayRequire="VanillaExpanded.VMemesE">VME_Anonymity</li>
+			<li MayRequire="VanillaExpanded.VMemesE">VME_Corruption</li>
+			-->
+		</disablesNeeds>
+		<comps>
+			<li>
+				<compClass>ESCP_Sload.HediffComp_SloadThrall</compClass>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<painFactor>0</painFactor>
+				<makeImmuneTo>
+					<li>Flu</li>
+					<li>Animal_Flu</li>
+					<li>Plague</li>
+					<li>Animal_Plague</li>
+					<li>Malaria</li>
+					<li>SleepingSickness</li>
+				</makeImmuneTo>
+				<statOffsets>
+					<ImmunityGainSpeed>3</ImmunityGainSpeed>
+					<ToxicSensitivity>-0.50</ToxicSensitivity>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+</Defs>

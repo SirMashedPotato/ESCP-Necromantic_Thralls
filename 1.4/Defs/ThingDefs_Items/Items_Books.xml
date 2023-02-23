@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==========[Base]==========-->
+	<ThingDef ParentName="ResourceBase" Name="ESCP_NecromanticThralls_BookBase" Abstract="True">
+		<thingClass>ThingWithComps</thingClass>
+		<techLevel>Medieval</techLevel>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<thingCategories>
+			<li>ESCP_Tome_NecromanticThralls</li>
+		</thingCategories>
+		<tradeTags>
+			<li>Artifact</li>
+			<li>ESCP_Tome_NecromanticThralls</li>
+		</tradeTags>
+		<statBases>
+			<MarketValue>1000</MarketValue>
+			<MaxHitPoints>20</MaxHitPoints>
+			<Mass>0.5</Mass>
+		</statBases>
+		<resourceReadoutPriority>Middle</resourceReadoutPriority>
+		<stackLimit>1</stackLimit>
+		<tradeNeverStack>true</tradeNeverStack>
+		<useHitPoints>true</useHitPoints>
+		<drawGUIOverlay>false</drawGUIOverlay>
+		<tradeability>All</tradeability>
+		<comps>
+			<li Class="CompProperties_Usable">
+				<useJob>UseArtifact</useJob>
+				<useLabel>Read tome</useLabel>
+			</li>
+		</comps>
+	</ThingDef>
+	<!-- ==========[ESCP_NecromanticThralls_BookCreateThrall]==========-->
+	<ThingDef ParentName="ESCP_NecromanticThralls_BookBase">
+		<defName>ESCP_NecromanticThralls_BookCreateThrall</defName>
+		<label>N'Gasta! Kvata! Kvakis!</label>
+		<description>An ancient tome, thought to have been written by the great necromancer N'Gasta. The contents are completely incomprehensible, as they appear to have been written in Sloadic. But maybe if one spend enough time reading it, they'll uncover some of the secrets of necromancy.\n\nThis tome appears to be exceptionally old, and will likely crumble into dust once someone has finished reading it.</description>
+		<descriptionHyperlinks>
+			<AbilityDef>ESCP_NecromanticThralls_CreateThrall</AbilityDef>
+		</descriptionHyperlinks>
+		<graphicData>
+			<texPath>Things/Item/Special/ESCP_NecromanticThralls_BookCreateThrall</texPath>
+		</graphicData>
+		<comps>
+			<li Class="ESCP_NecromanticThralls.CompProperties_UseEffectThrallBook">
+				<abilityDef>ESCP_NecromanticThralls_CreateThrall</abilityDef>
+			</li>
+		</comps>
+	</ThingDef>
+</Defs>
