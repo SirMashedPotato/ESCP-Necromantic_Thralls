@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+	
+	<!-- General -->
+	<ESCP_NecromanticThralls_ModName>ESCP - Necromantic Thralls</ESCP_NecromanticThralls_ModName>
+	
+	<!-- Necromantic Thralls -->
+	
+	<ESCP_NecromanticThralls_ThrallNamesArePurple>thrall names are purple.</ESCP_NecromanticThralls_ThrallNamesArePurple>
+	<ESCP_NecromanticThralls_ThrallNamesColourTranspilerA>Enable the Harmony transpiler for pawn tabs, allowing thrall names to appear purple.</ESCP_NecromanticThralls_ThrallNamesColourTranspilerA>
+	<ESCP_NecromanticThralls_ThrallNamesColourTranspilerB>Enable the Harmony transpiler for travel dialogue, allowing thrall names to appear purple.</ESCP_NecromanticThralls_ThrallNamesColourTranspilerB>
+	<ESCP_NecromanticThralls_ThrallNamesColourTranspilerTooltip>Injects an additional check into vanilla code, disable if it causes issues. As it's a transpiler, you will need to restart the game for changes to take effect.</ESCP_NecromanticThralls_ThrallNamesColourTranspilerTooltip>
+
+	<ESCP_NecromanticThralls_ThrallCanDryad>Allow enthralling Ideology dryad corpses.</ESCP_NecromanticThralls_ThrallCanDryad>
+	<ESCP_NecromanticThralls_ThrallSkillLimit>Allow the 'improve thrall skills' ability increasing levels past 20.</ESCP_NecromanticThralls_ThrallSkillLimit>
+	
+	<ESCP_NecromanticThralls_ThrallResSkillDecay>Enable thrall resurrection skill decay.</ESCP_NecromanticThralls_ThrallResSkillDecay>
+	<ESCP_NecromanticThralls_ThrallResSkillDecayTooltip>If enabled, resurrecting a pawn as a thrall will cause the level of all skills to decay, with a 25% chance the level does not decrease at all.\n\nA skill at level 20 will decrease by 5.\nA skill at level 10 will decrease by 2.\nA skill at level 5 will decrease by 1.\nA skill at, or below, level 3 will not decrease at all.</ESCP_NecromanticThralls_ThrallResSkillDecayTooltip>
+	
+	<ESCP_NecromanticThralls_ThrallDisableNeeds>Disable thrall needs.</ESCP_NecromanticThralls_ThrallDisableNeeds>
+	<ESCP_NecromanticThralls_ThrallDisableMoods>Disable thrall thoughts.</ESCP_NecromanticThralls_ThrallDisableMoods>
+	<ESCP_NecromanticThralls_ThrallIdeoCertainty>Disable thrall Ideology certainty decay.</ESCP_NecromanticThralls_ThrallIdeoCertainty>
+	<ESCP_NecromanticThralls_ThrallSkillLearning>Disable thrall skill learning.</ESCP_NecromanticThralls_ThrallSkillLearning>
+	<ESCP_NecromanticThralls_ThrallSkillDecay>Disable thrall skill decay.</ESCP_NecromanticThralls_ThrallSkillDecay>
+	
+	<ESCP_NecromanticThralls_ThrallDisableBloodloss>Disable thralls suffering from bloodloss.</ESCP_NecromanticThralls_ThrallDisableBloodloss>
+	<ESCP_NecromanticThralls_ThrallDisableHeatstroke>Disable thralls suffering from heatstroke.</ESCP_NecromanticThralls_ThrallDisableHeatstroke>
+	<ESCP_NecromanticThralls_ThrallDisableHypothermia>Disable thralls suffering from hypothermia.</ESCP_NecromanticThralls_ThrallDisableHypothermia>
+	
+	<ESCP_NecromanticThralls_ThrallMilkable>Disable thralls being milkable.</ESCP_NecromanticThralls_ThrallMilkable>
+	<ESCP_NecromanticThralls_ThrallShearable>Disable thralls being shearable.</ESCP_NecromanticThralls_ThrallShearable>
+	<ESCP_NecromanticThralls_ThrallEggLaying>Disable thralls laying eggs.</ESCP_NecromanticThralls_ThrallEggLaying>
+	<ESCP_NecromanticThralls_ThrallTrainable>Disable thralls being trainable.</ESCP_NecromanticThralls_ThrallTrainable>
+	<ESCP_NecromanticThralls_ThrallTrainableDecay>Disable thrall trainable decay.</ESCP_NecromanticThralls_ThrallTrainableDecay>
+	<ESCP_NecromanticThralls_ThrallMating>Disable thrall mating.</ESCP_NecromanticThralls_ThrallMating>
+	<ESCP_NecromanticThralls_ThrallInspirations>Disable thralls receiving inspirations.</ESCP_NecromanticThralls_ThrallInspirations>
+
+	<ESCP_NecromanticThralls_ThrallSocialInteractions>Disable thralls doing certain social interactions.</ESCP_NecromanticThralls_ThrallSocialInteractions>
+	
+	<ESCP_NecromanticThralls_ThrallVEF_AnimalProducts>[VEF] Disable thralls producing resources.</ESCP_NecromanticThralls_ThrallVEF_AnimalProducts>
+	<ESCP_NecromanticThralls_ThrallVEF_AsexualReproduction>[VEF] Disable thralls reproducing asexually.</ESCP_NecromanticThralls_ThrallVEF_AsexualReproduction>
+
+</LanguageData>
