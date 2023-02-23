@@ -1,12 +1,36 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+	<!-- ========== [ESCP_NecromanticThralls_ThrallStorage] ========== -->
+	<HediffDef>
+		<defName>ESCP_NecromanticThralls_ThrallStorage</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>thrall storage</label>
+		<description>You shouldn't be seeing this. Straight to jail.</description>
+		<defaultLabelColor>(0.8, 0.6, 1.0)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_GiveAbility">
+				<abilityDef>ESCP_NecromanticThralls_CreateThrall</abilityDef>
+			</li>
+			<li>
+				<compClass>ESCP_NecromanticThralls.HediffComp_ThrallStorage</compClass>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<becomeVisible>false</becomeVisible>
+			</li>
+		</stages>
+	</HediffDef>
+	<!-- ========== [ESCP_NecromanticThralls_Enthralled] ========== -->
 	<HediffDef>
 		<defName>ESCP_NecromanticThralls_Enthralled</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		<label>necromantic thrall</label>
 		<description>A corpse puppeteered by a necromancer, using ancient Sloadic magic. While the corpse is technically alive again, the mind is barely conscious, and effectively simply an extension of its masters.\n\nDisables almost all needs and thoughts, as well as providing complete immunity to pain. While thralls will not improve skills, their skill level will not decay over time.</description>
 		<defaultLabelColor>(0.8, 0.6, 1.0)</defaultLabelColor>
-		<scenarioCanAdd>true</scenarioCanAdd>
+		<scenarioCanAdd>false</scenarioCanAdd>
 		<maxSeverity>1.0</maxSeverity>
 		<isBad>false</isBad>
 		<!--	Now, mostly, done through Harmony patches, because doing it this way apparently breaks shit -->
@@ -29,8 +53,9 @@
 		</disablesNeeds>
 		<comps>
 			<li>
-				<compClass>ESCP_Sload.HediffComp_SloadThrall</compClass>
+				<compClass>ESCP_NecromanticThralls.HediffComp_Enthralled</compClass>
 			</li>
+			<li Class="HediffCompProperties_DisappearsOnDeath"/>
 		</comps>
 		<stages>
 			<li>
@@ -45,7 +70,7 @@
 				</makeImmuneTo>
 				<statOffsets>
 					<ImmunityGainSpeed>3</ImmunityGainSpeed>
-					<ToxicSensitivity>-0.50</ToxicSensitivity>
+					<ToxicResistance>-0.50</ToxicResistance>
 				</statOffsets>
 			</li>
 		</stages>

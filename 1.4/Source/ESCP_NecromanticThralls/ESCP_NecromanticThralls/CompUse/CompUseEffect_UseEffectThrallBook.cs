@@ -19,13 +19,12 @@ namespace ESCP_NecromanticThralls
 			if (Props.abilityDef != null)
 			{
 				usedBy.abilities.GainAbility(Props.abilityDef);
-				Messages.Message("ESCP_NecromanticThralls_KnowledgeGained".Translate(usedBy.Name, parent.Label), usedBy, MessageTypeDefOf.PositiveEvent);
 			}
 			if (Props.hediffDef != null)
 			{
 				usedBy.health.AddHediff(Props.hediffDef);
-				Messages.Message("ESCP_NecromanticThralls_KnowledgeGained".Translate(usedBy.Name, parent.Label), usedBy, MessageTypeDefOf.PositiveEvent);
 			}
+			Messages.Message("ESCP_NecromanticThralls_KnowledgeGained".Translate(usedBy.Name, parent.Label), usedBy, MessageTypeDefOf.PositiveEvent);
 			parent.Destroy();
 		}
 

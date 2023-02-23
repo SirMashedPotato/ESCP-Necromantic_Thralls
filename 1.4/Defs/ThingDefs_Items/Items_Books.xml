@@ -45,7 +45,7 @@
 		</graphicData>
 		<comps>
 			<li Class="ESCP_NecromanticThralls.CompProperties_UseEffectThrallBook">
-				<abilityDef>ESCP_NecromanticThralls_CreateThrall</abilityDef>
+				<hediffDef>ESCP_NecromanticThralls_ThrallStorage</hediffDef>
 			</li>
 		</comps>
 	</ThingDef>

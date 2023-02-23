@@ -10,23 +10,22 @@
 		<defName>ESCP_NecromanticThralls_CreateThrall</defName>
 		<label>create thrall</label>
 		<description>Puppeteer a fresh corpse, turning it into a thrall. Thralls feel no emotions, and have no needs. The connection will be severed if the controlling necromancer is downed or killed.</description>
-		<iconPath>UI/Abilities/ESCP_SloadCreateThrall</iconPath>
-		<groupDef>ESCP_NecromanticThralls_Thrall</groupDef>
+		<charges>3</charges>
+		<cooldownTicksRange>500000</cooldownTicksRange>
+		<iconPath>UI/Abilities/ESCP_NecromanticThralls_CreateThrall</iconPath>
 		<jobDef>CastAbilityOnThingMelee</jobDef>
 		<stunTargetWhileCasting>True</stunTargetWhileCasting>
 		<showPsycastEffects>False</showPsycastEffects>
 		<displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
 		<disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
-		<statBases>
-
-		</statBases>
 		<comps>
-			<li Class="ESCP_Sload.CompProperties_SloadThrallCreate">
+			<li Class="ESCP_NecromanticThralls.CompProperties_ThrallCreate">
 				<skill>Intellectual</skill>
 				<hediff>ESCP_NecromanticThralls_Enthralled</hediff>
-				<disablerPrecept>ESCP_NecromanticThralls_ThrallsHeretical</disablerPrecept>
+				<disablerPrecept MayRequire="Ludeon.RimWorld.Ideology">ESCP_NecromanticThralls_ThrallsHeretical</disablerPrecept>
 				<levelRequirement>
 					<li>0</li>
+					<li>3</li>
 					<li>6</li>
 					<li>9</li>
 					<li>12</li>
@@ -36,22 +35,21 @@
 				</levelRequirement>
 				<thrallLimit>
 					<li>0</li>
+					<li>1</li>
 					<li>3</li>
 					<li>5</li>
 					<li>7</li>
+					<li>8</li>
+					<li>9</li>
 					<li>10</li>
-					<li>12</li>
-					<li>15</li>
 				</thrallLimit>
-				<overLevelsRequired>10</overLevelsRequired>
-				<extraPerOverLevel>1</extraPerOverLevel>
 			</li>
 		</comps>
 		<verbProperties>
 			<drawAimPie>False</drawAimPie>
 			<range>-1</range>
 			<warmupTime>10.0</warmupTime>
-			<verbClass>ESCP_Sload.Verb_CastAbilityTouch_SloadThrallCreate</verbClass>
+			<verbClass>ESCP_NecromanticThralls.Verb_CastAbilityTouch_ThrallCreate</verbClass>
 			<targetParams>
 				<canTargetItems>true</canTargetItems>
 				<canTargetSelf>false</canTargetSelf>
