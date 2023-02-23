@@ -55,8 +55,7 @@ namespace ESCP_NecromanticThralls
                 }
 
                 ResurrectionUtility.Resurrect(c.InnerPawn);
-                /* SETTINGS TODO
-                if (ESCP_Sload_ModSettings.SloadThrallResSkillDecay && p.RaceProps.Humanlike)
+                if (ESCP_NecromanticThralls_ModSettings.ThrallResSkillDecay && p.RaceProps.Humanlike)
                 {
                     foreach (SkillRecord sr in p.skills.skills)
                     {
@@ -66,7 +65,6 @@ namespace ESCP_NecromanticThralls
                         }
                     }
                 }
-                */
                 CompStorage().AddThrall(p);
             }
         }

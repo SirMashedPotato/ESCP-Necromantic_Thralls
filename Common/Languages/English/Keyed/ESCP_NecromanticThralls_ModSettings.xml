@@ -3,10 +3,11 @@
 	
 	<!-- General -->
 	<ESCP_NecromanticThralls_ModName>ESCP - Necromantic Thralls</ESCP_NecromanticThralls_ModName>
+	<ESCP_Reset>Reset all settings</ESCP_Reset>
 	
 	<!-- Necromantic Thralls -->
 	
-	<ESCP_NecromanticThralls_ThrallNamesArePurple>thrall names are purple.</ESCP_NecromanticThralls_ThrallNamesArePurple>
+	<ESCP_NecromanticThralls_ThrallNamesArePurple>Thrall names are purple.</ESCP_NecromanticThralls_ThrallNamesArePurple>
 	<ESCP_NecromanticThralls_ThrallNamesColourTranspilerA>Enable the Harmony transpiler for pawn tabs, allowing thrall names to appear purple.</ESCP_NecromanticThralls_ThrallNamesColourTranspilerA>
 	<ESCP_NecromanticThralls_ThrallNamesColourTranspilerB>Enable the Harmony transpiler for travel dialogue, allowing thrall names to appear purple.</ESCP_NecromanticThralls_ThrallNamesColourTranspilerB>
 	<ESCP_NecromanticThralls_ThrallNamesColourTranspilerTooltip>Injects an additional check into vanilla code, disable if it causes issues. As it's a transpiler, you will need to restart the game for changes to take effect.</ESCP_NecromanticThralls_ThrallNamesColourTranspilerTooltip>
@@ -30,11 +31,11 @@
 	<ESCP_NecromanticThralls_ThrallMilkable>Disable thralls being milkable.</ESCP_NecromanticThralls_ThrallMilkable>
 	<ESCP_NecromanticThralls_ThrallShearable>Disable thralls being shearable.</ESCP_NecromanticThralls_ThrallShearable>
 	<ESCP_NecromanticThralls_ThrallEggLaying>Disable thralls laying eggs.</ESCP_NecromanticThralls_ThrallEggLaying>
-	<ESCP_NecromanticThralls_ThrallTrainable>Disable thralls being trainable.</ESCP_NecromanticThralls_ThrallTrainable>
-	<ESCP_NecromanticThralls_ThrallTrainableDecay>Disable thrall trainable decay.</ESCP_NecromanticThralls_ThrallTrainableDecay>
-	<ESCP_NecromanticThralls_ThrallMating>Disable thrall mating.</ESCP_NecromanticThralls_ThrallMating>
+	<ESCP_NecromanticThralls_ThrallTrainable>Disable animal thralls being trainable.</ESCP_NecromanticThralls_ThrallTrainable>
+	<ESCP_NecromanticThralls_ThrallTrainableDecay>Disable animal thralls trainable decay.</ESCP_NecromanticThralls_ThrallTrainableDecay>
+	<ESCP_NecromanticThralls_ThrallMating>Disable animal thralls mating.</ESCP_NecromanticThralls_ThrallMating>
+	
 	<ESCP_NecromanticThralls_ThrallInspirations>Disable thralls receiving inspirations.</ESCP_NecromanticThralls_ThrallInspirations>
-
 	<ESCP_NecromanticThralls_ThrallSocialInteractions>Disable thralls doing certain social interactions.</ESCP_NecromanticThralls_ThrallSocialInteractions>
 	
 	<ESCP_NecromanticThralls_ThrallVEF_AnimalProducts>[VEF] Disable thralls producing resources.</ESCP_NecromanticThralls_ThrallVEF_AnimalProducts>

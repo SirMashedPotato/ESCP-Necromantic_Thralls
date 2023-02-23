@@ -19,18 +19,16 @@ namespace ESCP_NecromanticThralls
         {
             if (t is Corpse c)
             {
-                /*
+                /* TODO
                 if (c.InnerPawn.def is ThingDef_AlienRace a && !a.alienRace.compatibility.IsFlesh)
                 {
                     return false;
                 }
                 */
-                /*
-                if (!ESCP_Sload_ModSettings.SloadThrallCanDryad && c.InnerPawn.RaceProps.Dryad)
+                if (!ESCP_NecromanticThralls_ModSettings.ThrallCanDryad && c.InnerPawn.RaceProps.Dryad)
                 {
                     return false;
                 }
-                */
                 if (ThrallImmune.Get(c.InnerPawn.def) != null)
                 {
                     return false;
