@@ -1,6 +1,7 @@
 ﻿using HarmonyLib;
 using RimWorld;
 using Verse;
+
 namespace ESCP_NecromanticThralls
 {
     [HarmonyPatch(typeof(CompMilkable))]

@@ -53,6 +53,8 @@
 					<li>Plague</li>
 					<li>Animal_Plague</li>
 					<li>Malaria</li>
+					<li>WoundInfection</li>
+					<li>LungRot</li>
 					<li>SleepingSickness</li>
 				</makeImmuneTo>
 				<statFactors>

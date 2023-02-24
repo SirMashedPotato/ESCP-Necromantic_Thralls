@@ -20,12 +20,14 @@ namespace ESCP_NecromanticThralls
         public static bool ThrallDisableIdeoCertainty => _instance.ESCP_NecromanticThralls_ThrallIdeoCertainty;
         public static bool ThrallDisableSkillLearning => _instance.ESCP_NecromanticThralls_ThrallSkillLearning;
         public static bool ThrallDisableSkillDecay => _instance.ESCP_NecromanticThralls_ThrallSkillDecay;
+        public static bool ThrallDisableAgeing => _instance.ESCP_NecromanticThralls_ThrallAgeing;
 
         public static bool ThrallDisableBloodloss => _instance.ESCP_NecromanticThralls_ThrallDisableBloodloss;
         public static bool ThrallDisableHeatstroke => _instance.ESCP_NecromanticThralls_ThrallDisableHeatstroke;
         public static bool ThrallDisableHypothermia => _instance.ESCP_NecromanticThralls_ThrallDisableHypothermia;
 
         public static bool ThrallDisableInspirations => _instance.ESCP_NecromanticThralls_ThrallInspirations;
+        public static bool ThrallDisableMentalBreaks => _instance.ESCP_NecromanticThralls_ThrallMentalBreaks;
         public static bool ThrallDisableSocialInteractions => _instance.ESCP_NecromanticThralls_ThrallSocialInteractions;
 
 
@@ -53,12 +55,14 @@ namespace ESCP_NecromanticThralls
         public bool ESCP_NecromanticThralls_ThrallIdeoCertainty = ESCP_NecromanticThralls_ThrallIdeoCertainty_def;
         public bool ESCP_NecromanticThralls_ThrallSkillLearning = ESCP_NecromanticThralls_ThrallSkillLearning_def;
         public bool ESCP_NecromanticThralls_ThrallSkillDecay = ESCP_NecromanticThralls_ThrallSkillDecay_def;
+        public bool ESCP_NecromanticThralls_ThrallAgeing = ESCP_NecromanticThralls_ThrallAgeing_def;
 
         public bool ESCP_NecromanticThralls_ThrallDisableBloodloss = ESCP_NecromanticThralls_ThrallDisableBloodloss_def;
         public bool ESCP_NecromanticThralls_ThrallDisableHeatstroke = ESCP_NecromanticThralls_ThrallDisableHeatstroke_def;
         public bool ESCP_NecromanticThralls_ThrallDisableHypothermia = ESCP_NecromanticThralls_ThrallDisableHypothermia_def;
 
         public bool ESCP_NecromanticThralls_ThrallInspirations = ESCP_NecromanticThralls_ThrallInspirations_def;
+        public bool ESCP_NecromanticThralls_ThrallMentalBreaks = ESCP_NecromanticThralls_ThrallMentalBreaks_def;
         public bool ESCP_NecromanticThralls_ThrallSocialInteractions = ESCP_NecromanticThralls_ThrallSocialInteractions_def;
 
         public bool ESCP_NecromanticThralls_ThrallMilkable = ESCP_NecromanticThralls_ThrallMilkable_def;
@@ -85,12 +89,14 @@ namespace ESCP_NecromanticThralls
         private static readonly bool ESCP_NecromanticThralls_ThrallIdeoCertainty_def = true;
         private static readonly bool ESCP_NecromanticThralls_ThrallSkillLearning_def = true;
         private static readonly bool ESCP_NecromanticThralls_ThrallSkillDecay_def = true;
+        private static readonly bool ESCP_NecromanticThralls_ThrallAgeing_def = true;
 
         private static readonly bool ESCP_NecromanticThralls_ThrallDisableBloodloss_def = true;
         private static readonly bool ESCP_NecromanticThralls_ThrallDisableHeatstroke_def = true;
         private static readonly bool ESCP_NecromanticThralls_ThrallDisableHypothermia_def = true;
 
         private static readonly bool ESCP_NecromanticThralls_ThrallInspirations_def = true;
+        private static readonly bool ESCP_NecromanticThralls_ThrallMentalBreaks_def = true;
         private static readonly bool ESCP_NecromanticThralls_ThrallSocialInteractions_def = true;
 
         private static readonly bool ESCP_NecromanticThralls_ThrallMilkable_def = true;
@@ -124,12 +130,14 @@ namespace ESCP_NecromanticThralls
             Scribe_Values.Look(ref ESCP_NecromanticThralls_ThrallIdeoCertainty, "ESCP_NecromanticThralls_ThrallIdeoCertainty", ESCP_NecromanticThralls_ThrallIdeoCertainty_def);
             Scribe_Values.Look(ref ESCP_NecromanticThralls_ThrallSkillLearning, "ESCP_NecromanticThralls_ThrallSkillLearning", ESCP_NecromanticThralls_ThrallSkillLearning_def);
             Scribe_Values.Look(ref ESCP_NecromanticThralls_ThrallSkillDecay, "ESCP_NecromanticThralls_ThrallSkillDecay", ESCP_NecromanticThralls_ThrallSkillDecay_def);
+            Scribe_Values.Look(ref ESCP_NecromanticThralls_ThrallAgeing, "ESCP_NecromanticThralls_ThrallAgeing", ESCP_NecromanticThralls_ThrallAgeing_def);
 
             Scribe_Values.Look(ref ESCP_NecromanticThralls_ThrallDisableBloodloss, "ESCP_NecromanticThralls_ThrallDisableBloodloss", ESCP_NecromanticThralls_ThrallDisableBloodloss_def);
             Scribe_Values.Look(ref ESCP_NecromanticThralls_ThrallDisableHeatstroke, "ESCP_NecromanticThralls_ThrallDisableHeatstroke", ESCP_NecromanticThralls_ThrallDisableHeatstroke_def);
             Scribe_Values.Look(ref ESCP_NecromanticThralls_ThrallDisableHypothermia, "ESCP_NecromanticThralls_ThrallDisableHypothermia", ESCP_NecromanticThralls_ThrallDisableHypothermia_def);
 
             Scribe_Values.Look(ref ESCP_NecromanticThralls_ThrallInspirations, "ESCP_NecromanticThralls_ThrallInspirations", ESCP_NecromanticThralls_ThrallInspirations_def);
+            Scribe_Values.Look(ref ESCP_NecromanticThralls_ThrallMentalBreaks, "ESCP_NecromanticThralls_ThrallMentalBreaks", ESCP_NecromanticThralls_ThrallMentalBreaks_def);
             Scribe_Values.Look(ref ESCP_NecromanticThralls_ThrallSocialInteractions, "ESCP_NecromanticThralls_ThrallSocialInteractions", ESCP_NecromanticThralls_ThrallSocialInteractions_def);
 
             Scribe_Values.Look(ref ESCP_NecromanticThralls_ThrallMilkable, "ESCP_NecromanticThralls_ThrallMilkable", ESCP_NecromanticThralls_ThrallMilkable_def);
@@ -160,12 +168,14 @@ namespace ESCP_NecromanticThralls
             _instance.ESCP_NecromanticThralls_ThrallIdeoCertainty = ESCP_NecromanticThralls_ThrallIdeoCertainty_def;
             _instance.ESCP_NecromanticThralls_ThrallSkillLearning = ESCP_NecromanticThralls_ThrallSkillLearning_def;
             _instance.ESCP_NecromanticThralls_ThrallSkillDecay = ESCP_NecromanticThralls_ThrallSkillDecay_def;
+            _instance.ESCP_NecromanticThralls_ThrallAgeing = ESCP_NecromanticThralls_ThrallAgeing_def;
 
             _instance.ESCP_NecromanticThralls_ThrallDisableBloodloss = ESCP_NecromanticThralls_ThrallDisableBloodloss_def;
             _instance.ESCP_NecromanticThralls_ThrallDisableHeatstroke = ESCP_NecromanticThralls_ThrallDisableHeatstroke_def;
             _instance.ESCP_NecromanticThralls_ThrallDisableHypothermia = ESCP_NecromanticThralls_ThrallDisableHypothermia_def;
 
             _instance.ESCP_NecromanticThralls_ThrallInspirations = ESCP_NecromanticThralls_ThrallInspirations_def;
+            _instance.ESCP_NecromanticThralls_ThrallMentalBreaks = ESCP_NecromanticThralls_ThrallMentalBreaks_def;
             _instance.ESCP_NecromanticThralls_ThrallSocialInteractions = ESCP_NecromanticThralls_ThrallSocialInteractions_def;
 
             _instance.ESCP_NecromanticThralls_ThrallMilkable = ESCP_NecromanticThralls_ThrallMilkable_def;

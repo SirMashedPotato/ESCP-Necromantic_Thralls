@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using Verse;
-using System;
 
 namespace ESCP_NecromanticThralls
 {
@@ -85,6 +84,8 @@ namespace ESCP_NecromanticThralls
             listing_Standard.Gap();
             listing_Standard.CheckboxLabeled("ESCP_NecromanticThralls_ThrallIdeoCertainty".Translate(), ref settings.ESCP_NecromanticThralls_ThrallIdeoCertainty);
             listing_Standard.Gap();
+            listing_Standard.CheckboxLabeled("ESCP_NecromanticThralls_ThrallAgeing".Translate(), ref settings.ESCP_NecromanticThralls_ThrallAgeing);
+            listing_Standard.Gap();
 
             listing_Standard.GapLine();
             listing_Standard.Gap();
@@ -102,6 +103,8 @@ namespace ESCP_NecromanticThralls
 
             ///Social related disabling
             listing_Standard.CheckboxLabeled("ESCP_NecromanticThralls_ThrallInspirations".Translate(), ref settings.ESCP_NecromanticThralls_ThrallInspirations);
+            listing_Standard.Gap();
+            listing_Standard.CheckboxLabeled("ESCP_NecromanticThralls_ThrallMentalBreaks".Translate(), ref settings.ESCP_NecromanticThralls_ThrallMentalBreaks);
             listing_Standard.Gap();
             listing_Standard.CheckboxLabeled("ESCP_NecromanticThralls_ThrallSocialInteractions".Translate(), ref settings.ESCP_NecromanticThralls_ThrallSocialInteractions);
             listing_Standard.Gap();
