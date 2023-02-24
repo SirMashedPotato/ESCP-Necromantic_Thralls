@@ -35,6 +35,10 @@
 		<isBad>false</isBad>
 		<!-- Needs disabling is done through Harmony patches, because doing it through hediffs apparently breaks shit -->
 		<comps>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>ESCP_NecromanticThralls_ThrallEffecter</stateEffecter>
+				<severityIndices>0~1</severityIndices>
+			</li>
 			<li>
 				<compClass>ESCP_NecromanticThralls.HediffComp_Enthralled</compClass>
 			</li>

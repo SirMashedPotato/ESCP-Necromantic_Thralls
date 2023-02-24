@@ -18,6 +18,7 @@
 		<showPsycastEffects>False</showPsycastEffects>
 		<displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
 		<disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+		<warmupEffecter>ESCP_NecromanticThralls_ThrallAbilityWarmup</warmupEffecter>
 		<comps>
 			<li Class="ESCP_NecromanticThralls.CompProperties_ThrallCreate">
 				<skill>Intellectual</skill>
