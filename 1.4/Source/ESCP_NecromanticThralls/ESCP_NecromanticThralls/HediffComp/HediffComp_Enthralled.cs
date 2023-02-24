@@ -74,16 +74,11 @@ namespace ESCP_NecromanticThralls
 
 		public override void CompPostPostRemoved()
 		{
-            try 
+			if (master != null)
 			{
-				///Will error if the hediff has been removed
-				///But also that really shouldn't ever happen
 				master.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ESCP_NecromanticThralls_ThrallStorage).TryGetComp<HediffComp_ThrallStorage>().RemoveThrall(Pawn);
 			}
-            finally
-            {
-				base.CompPostPostRemoved();
-			}
+			base.CompPostPostRemoved();
 		}
 
 		public override string CompLabelInBracketsExtra => master?.Name.ToString();

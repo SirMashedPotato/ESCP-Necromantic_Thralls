@@ -17,27 +17,27 @@ namespace ESCP_NecromanticThralls
 
         public static bool ThrallDisableNeeds => _instance.ESCP_NecromanticThralls_ThrallDisableNeeds;
         public static bool ThrallDisableMoods => _instance.ESCP_NecromanticThralls_ThrallDisableMoods;
-        public static bool ThrallIdeoCertainty => _instance.ESCP_NecromanticThralls_ThrallIdeoCertainty;
-        public static bool ThrallSkillLearning => _instance.ESCP_NecromanticThralls_ThrallSkillLearning;
-        public static bool ThrallSkillDecay => _instance.ESCP_NecromanticThralls_ThrallSkillDecay;
+        public static bool ThrallDisableIdeoCertainty => _instance.ESCP_NecromanticThralls_ThrallIdeoCertainty;
+        public static bool ThrallDisableSkillLearning => _instance.ESCP_NecromanticThralls_ThrallSkillLearning;
+        public static bool ThrallDisableSkillDecay => _instance.ESCP_NecromanticThralls_ThrallSkillDecay;
 
         public static bool ThrallDisableBloodloss => _instance.ESCP_NecromanticThralls_ThrallDisableBloodloss;
         public static bool ThrallDisableHeatstroke => _instance.ESCP_NecromanticThralls_ThrallDisableHeatstroke;
         public static bool ThrallDisableHypothermia => _instance.ESCP_NecromanticThralls_ThrallDisableHypothermia;
 
-        public static bool ThrallInspirations => _instance.ESCP_NecromanticThralls_ThrallInspirations;
+        public static bool ThrallDisableInspirations => _instance.ESCP_NecromanticThralls_ThrallInspirations;
         public static bool ThrallDisableSocialInteractions => _instance.ESCP_NecromanticThralls_ThrallSocialInteractions;
 
 
-        public static bool ThrallMilkable => _instance.ESCP_NecromanticThralls_ThrallMilkable;
-        public static bool ThrallShearable => _instance.ESCP_NecromanticThralls_ThrallShearable;
-        public static bool ThrallEggLaying => _instance.ESCP_NecromanticThralls_ThrallEggLaying;
-        public static bool ThrallTrainable => _instance.ESCP_NecromanticThralls_ThrallTrainable;
-        public static bool ThrallTrainableDecay => _instance.ESCP_NecromanticThralls_ThrallTrainableDecay;
-        public static bool ThrallMating => _instance.ESCP_NecromanticThralls_ThrallMating;
+        public static bool ThrallDisableMilkable => _instance.ESCP_NecromanticThralls_ThrallMilkable;
+        public static bool ThrallDisableShearable => _instance.ESCP_NecromanticThralls_ThrallShearable;
+        public static bool ThrallDisableEggLaying => _instance.ESCP_NecromanticThralls_ThrallEggLaying;
+        public static bool ThrallDisableTrainable => _instance.ESCP_NecromanticThralls_ThrallTrainable;
+        public static bool ThrallDisableTrainableDecay => _instance.ESCP_NecromanticThralls_ThrallTrainableDecay;
+        public static bool ThrallDisableMating => _instance.ESCP_NecromanticThralls_ThrallMating;
 
-        public static bool ThrallVEF_AnimalProducts => _instance.ESCP_NecromanticThralls_ThrallVEF_AnimalProducts;
-        public static bool ThrallVEF_AsexualReproduction => _instance.ESCP_NecromanticThralls_ThrallVEF_AsexualReproduction;
+        public static bool ThrallVEF_DisableAnimalProducts => _instance.ESCP_NecromanticThralls_ThrallVEF_AnimalProducts;
+        public static bool ThrallVEF_DisableAsexualReproduction => _instance.ESCP_NecromanticThralls_ThrallVEF_AsexualReproduction;
 
         /* ==========[VARIABLES]========== */
         public bool ESCP_NecromanticThralls_ThrallNamesArePurple = ESCP_NecromanticThralls_ThrallNamesArePurple_def;

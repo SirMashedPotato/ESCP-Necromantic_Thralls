@@ -33,24 +33,7 @@
 		<scenarioCanAdd>false</scenarioCanAdd>
 		<maxSeverity>1.0</maxSeverity>
 		<isBad>false</isBad>
-		<!--	Now, mostly, done through Harmony patches, because doing it this way apparently breaks shit -->
-		<disablesNeeds>
-			<!--
-			<li>Mood</li>
-			<li>Food</li>
-			<li>Rest</li>
-			<li>Joy</li>
-			<li>Beauty</li>
-			<li>Comfort</li>
-			<li>Outdoors</li>
-			<li>Indoors</li>
-			<li>DrugDesire</li>
-			<li>RoomSize</li>
-			<li MayRequire="Ludeon.RimWorld.Royalty">Authority</li>
-			<li MayRequire="VanillaExpanded.VMemesE">VME_Anonymity</li>
-			<li MayRequire="VanillaExpanded.VMemesE">VME_Corruption</li>
-			-->
-		</disablesNeeds>
+		<!-- Needs disabling is done through Harmony patches, because doing it through hediffs apparently breaks shit -->
 		<comps>
 			<li>
 				<compClass>ESCP_NecromanticThralls.HediffComp_Enthralled</compClass>

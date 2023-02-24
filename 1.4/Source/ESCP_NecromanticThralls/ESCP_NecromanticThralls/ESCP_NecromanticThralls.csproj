@@ -69,11 +69,28 @@
     <Compile Include="AbilityComp\Props\CompProperties_ThrallCreate.cs" />
     <Compile Include="CompUse\CompUseEffect_UseEffectThrallBook.cs" />
     <Compile Include="CompUse\Props\CompProperties_UseEffectThrallBook.cs" />
+    <Compile Include="DefOf\InteractionDefOf.cs" />
+    <Compile Include="DefOf\ThoughtDefOf.cs" />
+    <Compile Include="Harmony\HarmonyInstance.cs" />
+    <Compile Include="Harmony\Thrall_AnimalBehaviours.cs" />
+    <Compile Include="Harmony\Thrall_AnimalMating.cs" />
+    <Compile Include="Harmony\Thrall_HediffGivers.cs" />
+    <Compile Include="Harmony\Thrall_Ideo.cs" />
+    <Compile Include="Harmony\Thrall_Inspirations.cs" />
+    <Compile Include="Harmony\Thrall_Interactions.cs" />
+    <Compile Include="Harmony\Thrall_NameColours.cs" />
+    <Compile Include="Harmony\Thrall_Needs.cs" />
+    <Compile Include="Harmony\Thrall_ResourceProduction.cs" />
+    <Compile Include="Harmony\Thrall_SkillLearning.cs" />
+    <Compile Include="Harmony\Thrall_Thoughts.cs" />
+    <Compile Include="Harmony\Thrall_Trading.cs" />
+    <Compile Include="Harmony\Thrall_Training.cs" />
     <Compile Include="ModSettings\ESCP_NecromanticThralls_Mod.cs" />
     <Compile Include="ModSettings\ESCP_NecromanticThralls_ModSettings.cs" />
+    <Compile Include="ThoughtWorker\ThoughtWorker_ThrallThought.cs" />
     <Compile Include="Utility\DebugTools.cs" />
     <Compile Include="DefModExtension\ThrallImmune.cs" />
-    <Compile Include="Defof\HediffDefOf.cs" />
+    <Compile Include="DefOf\HediffDefOf.cs" />
     <Compile Include="HediffComp\HediffComp_Enthralled.cs" />
     <Compile Include="HediffComp\HediffComp_ThrallStorage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -84,8 +101,6 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Harmony\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

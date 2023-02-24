@@ -42,19 +42,20 @@ namespace ESCP_NecromanticThralls
             if (t != null && t is Corpse c)
             {
                 Pawn p = c.InnerPawn;
-
-                p.SetFaction(parent.pawn.Faction, parent.pawn);
+                if (p.Faction != parent.pawn.Faction)
+                {
+                    p.SetFaction(parent.pawn.Faction, parent.pawn);
+                }
                 if (ModsConfig.IdeologyActive && p.RaceProps.Humanlike)
                 {
                     p.ideo.SetIdeo(parent.pawn.Ideo);
                 }
-
+                ResurrectionUtility.Resurrect(c.InnerPawn);
                 if (Props.hediff != null)
                 {
-                    p.health.AddHediff(Props.hediff).TryGetComp<HediffComp_Enthralled>().SetMaster(parent.pawn);
+                    p.health.AddHediff(Props.hediff);
+                    p.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ESCP_NecromanticThralls_Enthralled).TryGetComp<HediffComp_Enthralled>().SetMaster(parent.pawn);
                 }
-
-                ResurrectionUtility.Resurrect(c.InnerPawn);
                 if (ESCP_NecromanticThralls_ModSettings.ThrallResSkillDecay && p.RaceProps.Humanlike)
                 {
                     foreach (SkillRecord sr in p.skills.skills)
