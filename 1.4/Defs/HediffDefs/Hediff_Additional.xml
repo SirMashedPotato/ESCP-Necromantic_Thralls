@@ -55,10 +55,22 @@
 					<li>Malaria</li>
 					<li>SleepingSickness</li>
 				</makeImmuneTo>
+				<statFactors>
+					<Fertility MayRequire="Ludeon.RimWorld.Biotech">0</Fertility>
+				</statFactors>
 				<statOffsets>
 					<ImmunityGainSpeed>3</ImmunityGainSpeed>
 					<ToxicResistance>-0.50</ToxicResistance>
 				</statOffsets>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<postFactor>0.9</postFactor>
+					</li>
+				</capMods>
+				<disabledWorkTags>
+					<li>Intellectual</li>
+				</disabledWorkTags>
 			</li>
 		</stages>
 	</HediffDef>
