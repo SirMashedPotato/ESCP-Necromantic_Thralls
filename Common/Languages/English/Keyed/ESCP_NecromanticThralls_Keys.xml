@@ -5,7 +5,7 @@
 	<ESCP_NecromanticThralls_PreceptDisabled>due to precept: Necromantic Thralls (Heretical)</ESCP_NecromanticThralls_PreceptDisabled>
 	<ESCP_NecromanticThralls_EntralledDisabled>due to being enthralled</ESCP_NecromanticThralls_EntralledDisabled>
 	<!-- Thrall limit gizmo -->
-	<ESCP_NecromanticThralls_ThrallLimitGizmo_Label>Thrall limit</ESCP_NecromanticThralls_ThrallLimitGizmo_Label>
+	<ESCP_NecromanticThralls_ThrallLimitGizmo_Label>Necromantic thralls</ESCP_NecromanticThralls_ThrallLimitGizmo_Label>
 	<ESCP_NecromanticThralls_ThrallLimitGizmo_BaseDesc>The limit to the number of necromantic thralls {0} can control. This limit will increase based on their {1} skill, with the maximum number of thralls increasing at specific milestones.\n\n</ESCP_NecromanticThralls_ThrallLimitGizmo_BaseDesc>
 	<ESCP_NecromanticThralls_ExtraTooltip_Limit>Thrall limit increased by {0}, at {1} {2}.</ESCP_NecromanticThralls_ExtraTooltip_Limit>
 	<ESCP_NecromanticThralls_ExtraTooltip_LimitUncapped>Thrall limit increased by 1 every 10 levels past 20</ESCP_NecromanticThralls_ExtraTooltip_LimitUncapped>
