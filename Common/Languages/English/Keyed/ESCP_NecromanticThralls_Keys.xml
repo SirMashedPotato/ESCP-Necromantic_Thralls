@@ -7,11 +7,13 @@
 	<ESCP_NecromanticThralls_ExtraTooltip_LimitUncapped>\nThrall limit increased by 1 every 10 levels past 20</ESCP_NecromanticThralls_ExtraTooltip_LimitUncapped>
 	<ESCP_NecromanticThralls_PreceptDisabled>due to precept: Necromantic Thralls (Heretical)</ESCP_NecromanticThralls_PreceptDisabled>
 	<ESCP_NecromanticThralls_EntralledDisabled>due to being enthralled</ESCP_NecromanticThralls_EntralledDisabled>
-	<!-- Thralls -->
+	<!-- Extra gizmos -->
 	<ESCP_NecromanticThralls_KillThrall>Sever Connection</ESCP_NecromanticThralls_KillThrall>
 	<ESCP_NecromanticThralls_Kill_Tooltip>Sever this thralls connection to {0}, effectively killing it... again.</ESCP_NecromanticThralls_Kill_Tooltip>
-	<ESCP_NecromanticThralls_KillThralls>Sever Connections</ESCP_NecromanticThralls_KillThralls>
-	<ESCP_NecromanticThralls_KillThralls_Tooltip>Sever the connection to all thralls, effectively killing them... again.\n\nCurrent thralls:\n{0}</ESCP_NecromanticThralls_KillThralls_Tooltip>
+	<ESCP_NecromanticThralls_SelectAllThralls>Select all thralls</ESCP_NecromanticThralls_SelectAllThralls>
+	<ESCP_NecromanticThralls_SelectAllThralls_Tooltip>Select all thralls controlled by this necromancer.\n\nCurrent thralls:\n{0}</ESCP_NecromanticThralls_SelectAllThralls_Tooltip>
+	<ESCP_NecromanticThralls_SelectMaster>Select master</ESCP_NecromanticThralls_SelectMaster>
+	<ESCP_NecromanticThralls_SelectMaster_Tooltip>Select the necromancer that controls this thrall.</ESCP_NecromanticThralls_SelectMaster_Tooltip>
 	<!-- Books -->
 	<ESCP_NecromanticThralls_BookAlreadyRead>{0} already has the knowledge of what this tome contains.</ESCP_NecromanticThralls_BookAlreadyRead>
 	<ESCP_NecromanticThralls_KnowledgeGained>{0} has finished reading {1}, though the tome appears to have crumbled into dust.</ESCP_NecromanticThralls_KnowledgeGained>

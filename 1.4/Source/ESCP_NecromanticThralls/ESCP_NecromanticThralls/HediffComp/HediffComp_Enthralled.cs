@@ -33,6 +33,21 @@ namespace ESCP_NecromanticThralls
 		{
 			yield return new Command_Action
 			{
+				defaultLabel = "ESCP_NecromanticThralls_SelectMaster".Translate(),
+				defaultDesc = "ESCP_NecromanticThralls_SelectMaster_Tooltip".Translate(),
+				icon = ContentFinder<Texture2D>.Get("UI/Gizmos/ESCP_NecromanticThralls_SelectMaster", true),
+				onHover = delegate ()
+				{
+					ShowMaster();
+				},
+				action = delegate ()
+				{
+					Find.Selector.ClearSelection();
+					Find.Selector.Select(master, true, true);
+				}
+			};
+			yield return new Command_Action
+			{
 				defaultLabel = "ESCP_NecromanticThralls_KillThrall".Translate(),
 				defaultDesc = "ESCP_NecromanticThralls_Kill_Tooltip".Translate(master.Name),
 				icon = ContentFinder<Texture2D>.Get("UI/Gizmos/ESCP_NecromanticThralls_DisbandThrall", true),

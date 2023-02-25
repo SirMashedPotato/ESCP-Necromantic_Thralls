@@ -99,9 +99,9 @@ namespace ESCP_NecromanticThralls
         {
             yield return new Command_Action
             {
-                defaultLabel = "ESCP_NecromanticThralls_KillThralls".Translate(),
-                defaultDesc = "ESCP_NecromanticThralls_KillThralls_Tooltip".Translate(GetThrallList()),
-                icon = ContentFinder<Texture2D>.Get("UI/Gizmos/ESCP_NecromanticThralls_MassDisbandThrall", true),
+                defaultLabel = "ESCP_NecromanticThralls_SelectAllThralls".Translate(),
+                defaultDesc = "ESCP_NecromanticThralls_SelectAllThralls_Tooltip".Translate(GetThrallList()),
+                icon = ContentFinder<Texture2D>.Get("UI/Gizmos/ESCP_NecromanticThralls_SelectAllThralls", true),
                 disabled = thrallsList.Count <= 0,
                 onHover = delegate ()
                 {
@@ -109,7 +109,11 @@ namespace ESCP_NecromanticThralls
                 },
                 action = delegate ()
                 {
-                    KillThralls();
+                    Find.Selector.ClearSelection();
+                    foreach(Pawn p in thrallsList)
+                    {
+                        Find.Selector.Select(p, true, true);
+                    }
                 }
             };
         }
