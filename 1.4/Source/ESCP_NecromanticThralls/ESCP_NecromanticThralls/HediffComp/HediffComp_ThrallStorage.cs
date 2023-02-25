@@ -20,11 +20,14 @@ namespace ESCP_NecromanticThralls
 
         public List<Pawn> thrallsList = new List<Pawn>();
 
+        public int extraThrallLimit = 0;
+
         private Gizmo_ThrallLimit thrallLimitGizmo;
 
         public override void CompExposeData()
         {
             base.CompExposeData();
+            Scribe_Values.Look(ref extraThrallLimit, "ESCP_NecromanticThralls_ExtraLimit");
             Scribe_Collections.Look(ref thrallsList, "ESCP_NecromanticThralls", LookMode.Reference);
         }
 
@@ -53,13 +56,18 @@ namespace ESCP_NecromanticThralls
                 int temp = curLevel - 20;
                 limit += temp / 10;
             }
-            /*
-            if (p.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ESCP_SloadThrassianElixir_Thrall) != null)
-            {
-                limit += 5;
-            }
-            */
-            return limit;
+            
+            return limit + extraThrallLimit;
+        }
+
+        public bool CanIncreaseThrallLimit()
+        {
+            return extraThrallLimit < Props.maxExtraLimit;
+        }
+
+        public void IncreaseThrallLimit(int increase)
+        {
+            extraThrallLimit += increase;
         }
 
         public void AddThrall(Pawn pawn)

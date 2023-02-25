@@ -72,7 +72,9 @@
     <Compile Include="AbilityComp\CompAbilityEffect_ThrallCreate.cs" />
     <Compile Include="AbilityComp\Props\CompProperties_ThrallCreate.cs" />
     <Compile Include="CompUse\CompUseEffect_UseEffectThrallBook.cs" />
+    <Compile Include="CompUse\CompUseEffect_UseEffectThrallLimitBook.cs" />
     <Compile Include="CompUse\Props\CompProperties_UseEffectThrallBook.cs" />
+    <Compile Include="CompUse\Props\CompProperties_UseEffectThrallLimitBook.cs" />
     <Compile Include="DefOf\InteractionDefOf.cs" />
     <Compile Include="DefOf\ThoughtDefOf.cs" />
     <Compile Include="Gizmo\Gizmo_ThrallLimit.cs" />

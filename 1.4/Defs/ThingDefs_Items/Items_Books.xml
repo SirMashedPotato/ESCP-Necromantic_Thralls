@@ -15,7 +15,7 @@
 			<li>ESCP_Tome_NecromanticThralls</li>
 		</tradeTags>
 		<statBases>
-			<MarketValue>1000</MarketValue>
+			<MarketValue>500</MarketValue>
 			<MaxHitPoints>20</MaxHitPoints>
 			<Mass>0.5</Mass>
 		</statBases>
@@ -43,9 +43,26 @@
 		<graphicData>
 			<texPath>Things/Item/Special/ESCP_NecromanticThralls_BookCreateThrall</texPath>
 		</graphicData>
+		<statBases>
+			<MarketValue>2000</MarketValue>
+		</statBases>
 		<comps>
 			<li Class="ESCP_NecromanticThralls.CompProperties_UseEffectThrallBook">
 				<hediffDef>ESCP_NecromanticThralls_ThrallStorage</hediffDef>
+			</li>
+		</comps>
+	</ThingDef>
+	<!-- ==========[ESCP_NecromanticThralls_BookThrallLimit]==========-->
+	<ThingDef ParentName="ESCP_NecromanticThralls_BookBase">
+		<defName>ESCP_NecromanticThralls_BookThrallLimit</defName>
+		<label>Ancient Sload tome (Thrall limit)</label>
+		<description>An ancient tome, thought to have been written by the great necromancer N'Gasta. The contents are almost completely incomprehensible, as they appear to have been written in Sloadic. But they appear to detail several ways of increasing the number of Necromantic Thralls one can control.\n\nThis tome appears to be exceptionally old, and will likely crumble into dust once someone has finished reading it.</description>
+		<graphicData>
+			<texPath>Things/Item/Special/ESCP_NecromanticThralls_BookThrallLimit</texPath>
+		</graphicData>
+		<comps>
+			<li Class="ESCP_NecromanticThralls.CompProperties_UseEffectThrallLimitBook">
+				<limitIncrease>1</limitIncrease>
 			</li>
 		</comps>
 	</ThingDef>

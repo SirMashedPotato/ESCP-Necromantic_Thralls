@@ -14,6 +14,7 @@ namespace ESCP_NecromanticThralls
         public SkillDef skill;
         public List<int> thrallLimit;
         public List<int> levelRequirement;
+        public int maxExtraLimit = 10;
 
         public override IEnumerable<string> ConfigErrors(HediffDef parentDef)
         {
