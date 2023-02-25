@@ -70,34 +70,6 @@ namespace ESCP_NecromanticThralls
             }
         }
 
-        public int CurrentLimit(Pawn p)
-        {
-            int curLevel = p.skills.GetSkill(Props.skill ?? SkillDefOf.Intellectual).Level;
-            int index = 0;
-            for (int i = 0; i < Props.levelRequirement.Count; i++)
-            {
-                if (Props.levelRequirement[i] <= curLevel)
-                {
-                    index = i;
-                }
-            }
-
-            int limit = Props.thrallLimit[index];
-
-            if (curLevel > 20)
-            {
-                int temp = curLevel - 20;
-                limit += temp / 10;
-            }
-            /*
-            if (p.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ESCP_SloadThrassianElixir_Thrall) != null)
-            {
-                limit += 5;
-            }
-            */
-            return limit;
-        }
-
         public override bool GizmoDisabled(out string reason)
         {
             if (Props.disablerPrecept != null && ModsConfig.IdeologyActive)
@@ -114,7 +86,7 @@ namespace ESCP_NecromanticThralls
                 return true;
             }
 
-            int limit = CurrentLimit(parent.pawn);
+            int limit = CompStorage().ThrallLimit();
             int count = CompStorage().ThrallCount();
             if (limit <= count)
             {
@@ -122,47 +94,6 @@ namespace ESCP_NecromanticThralls
                 return true;
             }
             return base.GizmoDisabled(out reason);
-        }
-
-        public override string ExtraTooltipPart()
-        {
-            string extra = "";
-            Pawn p = parent.pawn;
-            int limit = CurrentLimit(p);
-            int count = CompStorage().ThrallCount();
-            int skillLevel = p.skills.GetSkill(Props.skill ?? SkillDefOf.Intellectual).Level;
-            extra += "ESCP_NecromanticThralls_ExtraTooltip_Count".Translate(count, limit);
-            if (skillLevel < 20)
-            {
-                extra += GetTooltipExtra_Limit(p, skillLevel);
-            }
-            else
-            {
-                if (skillLevel > 20)
-                {
-                    extra += "ESCP_NecromanticThralls_ExtraTooltip_LimitUncapped".Translate();
-                }
-            }
-
-            return extra;
-        }
-
-        public string GetTooltipExtra_Limit(Pawn p, int curLevel)
-        {
-            int index = 0;
-
-            for (int i = 0; i < Props.levelRequirement.Count; i++)
-            {
-                if (Props.levelRequirement[i] <= curLevel)
-                {
-                    index = i + 1;
-                }
-            }
-            if (index + 1 != Props.levelRequirement.Count())
-            {
-                return "ESCP_NecromanticThralls_ExtraTooltip_Limit".Translate(Props.thrallLimit[index] - Props.thrallLimit[index - 1], Props.levelRequirement[index], Props.skill != null ? Props.skill.label : SkillDefOf.Intellectual.label);
-            }
-            return "";
         }
     }
 }

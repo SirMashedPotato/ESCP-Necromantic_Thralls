@@ -59,15 +59,14 @@ namespace ESCP_NecromanticThralls
             listing_Standard.GapLine();
             listing_Standard.Gap();
 
-            ///Special allowances
+            ///Extras, default to disabled
             listing_Standard.CheckboxLabeled("ESCP_NecromanticThralls_ThrallCanDryad".Translate(), ref settings.ESCP_NecromanticThralls_ThrallCanDryad);
             listing_Standard.Gap();
 
-            listing_Standard.GapLine();
+            listing_Standard.CheckboxLabeled("ESCP_NecromanticThralls_ThrallResSkillDecay".Translate(), ref settings.ESCP_NecromanticThralls_ThrallResSkillDecay, "ESCP_NecromanticThralls_ThrallResSkillDecayTooltip".Translate());
             listing_Standard.Gap();
 
-            ///On ressurection
-            listing_Standard.CheckboxLabeled("ESCP_NecromanticThralls_ThrallResSkillDecay".Translate(), ref settings.ESCP_NecromanticThralls_ThrallResSkillDecay, "ESCP_NecromanticThralls_ThrallResSkillDecayTooltip".Translate());
+            listing_Standard.CheckboxLabeled("ESCP_NecromanticThralls_ThrallRotOnDeath".Translate(), ref settings.ESCP_NecromanticThralls_ThrallRotOnDeath, "ESCP_NecromanticThralls_ThrallRotOnDeath_Tooltip".Translate());
             listing_Standard.Gap();
 
             listing_Standard.GapLine();

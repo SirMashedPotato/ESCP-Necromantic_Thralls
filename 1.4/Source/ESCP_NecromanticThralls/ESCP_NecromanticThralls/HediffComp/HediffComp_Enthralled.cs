@@ -34,7 +34,7 @@ namespace ESCP_NecromanticThralls
 			yield return new Command_Action
 			{
 				defaultLabel = "ESCP_NecromanticThralls_SelectMaster".Translate(),
-				defaultDesc = "ESCP_NecromanticThralls_SelectMaster_Tooltip".Translate(),
+				defaultDesc = "ESCP_NecromanticThralls_SelectMaster_Tooltip".Translate(master.Name),
 				icon = ContentFinder<Texture2D>.Get("UI/Gizmos/ESCP_NecromanticThralls_SelectMaster", true),
 				onHover = delegate ()
 				{
@@ -94,6 +94,23 @@ namespace ESCP_NecromanticThralls
 				master.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ESCP_NecromanticThralls_ThrallStorage).TryGetComp<HediffComp_ThrallStorage>().RemoveThrall(Pawn);
 			}
 			base.CompPostPostRemoved();
+		}
+
+		public override void Notify_PawnDied()
+		{
+            if (ESCP_NecromanticThralls_ModSettings.ThrallRotOnDeath)
+            {
+				Corpse corpse = parent.pawn.Corpse;
+				if (corpse != null && corpse.Map != null)
+				{
+					var rot = corpse.GetComp<CompRottable>();
+					if (rot != null)
+					{
+						rot.RotProgress = rot.PropsRot.TicksToRotStart;
+					}
+				}
+			}
+			base.Notify_PawnDied();
 		}
 
 		public override string CompLabelInBracketsExtra => master?.Name.ToString();

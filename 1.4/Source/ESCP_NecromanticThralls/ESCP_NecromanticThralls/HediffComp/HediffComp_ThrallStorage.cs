@@ -10,7 +10,17 @@ namespace ESCP_NecromanticThralls
 {
     public class HediffComp_ThrallStorage : HediffComp
     {
+        public HediffCompProperties_ThrallStorage Props
+        {
+            get
+            {
+                return (HediffCompProperties_ThrallStorage)props;
+            }
+        }
+
         public List<Pawn> thrallsList = new List<Pawn>();
+
+        private Gizmo_ThrallLimit thrallLimitGizmo;
 
         public override void CompExposeData()
         {
@@ -21,6 +31,35 @@ namespace ESCP_NecromanticThralls
         public int ThrallCount()
         {
             return thrallsList.NullOrEmpty() ? 0 : thrallsList.Count();
+        }
+
+        public int ThrallLimit()
+        {
+            Pawn p = parent.pawn;
+            int curLevel = p.skills.GetSkill(Props.skill ?? SkillDefOf.Intellectual).Level;
+            int index = 0;
+            for (int i = 0; i < Props.levelRequirement.Count; i++)
+            {
+                if (Props.levelRequirement[i] <= curLevel)
+                {
+                    index = i;
+                }
+            }
+
+            int limit = Props.thrallLimit[index];
+
+            if (curLevel > 20)
+            {
+                int temp = curLevel - 20;
+                limit += temp / 10;
+            }
+            /*
+            if (p.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ESCP_SloadThrassianElixir_Thrall) != null)
+            {
+                limit += 5;
+            }
+            */
+            return limit;
         }
 
         public void AddThrall(Pawn pawn)
@@ -82,13 +121,6 @@ namespace ESCP_NecromanticThralls
                 KillThralls();
             }
         }
-
-        public override void Notify_PawnDied()
-        {
-            KillThralls();
-            base.Notify_PawnDied();
-        }
-
         public override void Notify_PawnKilled()
         {
             KillThralls();
@@ -97,6 +129,11 @@ namespace ESCP_NecromanticThralls
 
         public override IEnumerable<Gizmo> CompGetGizmos()
         {
+            if (thrallLimitGizmo == null)
+            {
+                thrallLimitGizmo = new Gizmo_ThrallLimit(this);
+            }
+            yield return thrallLimitGizmo;
             yield return new Command_Action
             {
                 defaultLabel = "ESCP_NecromanticThralls_SelectAllThralls".Translate(),

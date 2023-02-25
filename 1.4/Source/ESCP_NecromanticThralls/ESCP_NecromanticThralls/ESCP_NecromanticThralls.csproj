@@ -55,6 +55,10 @@
       <HintPath>I:\Steam_Library\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>I:\Steam_Library\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="UnityEngine.TextRenderingModule">
       <HintPath>I:\Steam_Library\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
       <Private>False</Private>
@@ -71,6 +75,7 @@
     <Compile Include="CompUse\Props\CompProperties_UseEffectThrallBook.cs" />
     <Compile Include="DefOf\InteractionDefOf.cs" />
     <Compile Include="DefOf\ThoughtDefOf.cs" />
+    <Compile Include="Gizmo\Gizmo_ThrallLimit.cs" />
     <Compile Include="Harmony\HarmonyInstance.cs" />
     <Compile Include="Harmony\Thrall_Ageing.cs" />
     <Compile Include="Harmony\Thrall_AnimalBehaviours.cs" />
@@ -87,6 +92,7 @@
     <Compile Include="Harmony\Thrall_Thoughts.cs" />
     <Compile Include="Harmony\Thrall_Trading.cs" />
     <Compile Include="Harmony\Thrall_Training.cs" />
+    <Compile Include="HediffComp\Props\HediffCompProperties_ThrallStorage.cs" />
     <Compile Include="ModSettings\ESCP_NecromanticThralls_Mod.cs" />
     <Compile Include="ModSettings\ESCP_NecromanticThralls_ModSettings.cs" />
     <Compile Include="ThoughtWorker\ThoughtWorker_ThrallThought.cs" />
