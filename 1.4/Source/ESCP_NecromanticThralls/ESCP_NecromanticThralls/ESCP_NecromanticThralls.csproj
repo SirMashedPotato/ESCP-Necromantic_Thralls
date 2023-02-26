@@ -71,8 +71,10 @@
   <ItemGroup>
     <Compile Include="AbilityComp\CompAbilityEffect_ThrallCreate.cs" />
     <Compile Include="AbilityComp\Props\CompProperties_ThrallCreate.cs" />
+    <Compile Include="CompUse\CompUseEffects_UseEffectCorpseCasket.cs" />
     <Compile Include="CompUse\CompUseEffect_UseEffectThrallBook.cs" />
     <Compile Include="CompUse\CompUseEffect_UseEffectThrallLimitBook.cs" />
+    <Compile Include="CompUse\Props\CompProperties_UseEffectCorpseCasket.cs" />
     <Compile Include="CompUse\Props\CompProperties_UseEffectThrallBook.cs" />
     <Compile Include="CompUse\Props\CompProperties_UseEffectThrallLimitBook.cs" />
     <Compile Include="DefOf\InteractionDefOf.cs" />

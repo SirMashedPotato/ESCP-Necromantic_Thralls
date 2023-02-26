@@ -5,4 +5,9 @@
 		<label>Ancient Sload tomes</label>
 		<parent>Items</parent>
 	</ThingCategoryDef>
+	<ThingCategoryDef>
+		<defName>ESCP_NecromanticThralls_CorpseCasket</defName>
+		<label>Corpse casket</label>
+		<parent>Items</parent>
+	</ThingCategoryDef>
 </Defs>

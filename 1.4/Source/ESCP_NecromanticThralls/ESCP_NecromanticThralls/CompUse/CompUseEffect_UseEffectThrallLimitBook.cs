@@ -1,7 +1,6 @@
 ﻿using Verse;
 using RimWorld;
 
-
 namespace ESCP_NecromanticThralls
 {
     public class CompUseEffect_UseEffectThrallLimitBook : CompUseEffect
