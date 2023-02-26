@@ -19,12 +19,6 @@ namespace ESCP_NecromanticThralls
         {
             if (t is Corpse c)
             {
-                /* TODO
-                if (c.InnerPawn.def is ThingDef_AlienRace a && !a.alienRace.compatibility.IsFlesh)
-                {
-                    return false;
-                }
-                */
                 if (!ESCP_NecromanticThralls_ModSettings.ThrallCanDryad && c.InnerPawn.RaceProps.Dryad)
                 {
                     return false;

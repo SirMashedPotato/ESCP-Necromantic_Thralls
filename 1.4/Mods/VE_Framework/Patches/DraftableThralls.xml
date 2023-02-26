@@ -20,7 +20,7 @@
 		<xpath>Defs/ThingDef[@Name="AnimalThingBase"]/comps</xpath>
 		<value>
 			<li>
-				<compClass>ESCP_NecromanticThralls.CompDraftableThrall</compClass>
+				<compClass>ESCP_NecromanticThralls_VEF.CompDraftableThrall</compClass>
 			</li>
 		</value>
 	</Operation>

@@ -1,9 +1,10 @@
 ﻿using Verse;
 using AnimalBehaviours;
+using ESCP_NecromanticThralls;
 
-namespace ESCP_NecromanticThralls
+namespace ESCP_NecromanticThralls_VEF
 {
-    public class CompDraftableThrall : ThingComp
+    class CompDraftableThrall : ThingComp
     {
         public override void PostSpawnSetup(bool respawningAfterLoad)
         {

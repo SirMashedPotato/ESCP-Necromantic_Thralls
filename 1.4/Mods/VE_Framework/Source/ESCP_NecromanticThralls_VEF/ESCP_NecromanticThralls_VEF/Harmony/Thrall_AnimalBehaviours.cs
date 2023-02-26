@@ -1,8 +1,9 @@
 ﻿using HarmonyLib;
 using Verse;
 using AnimalBehaviours;
+using ESCP_NecromanticThralls;
 
-namespace ESCP_NecromanticThralls
+namespace ESCP_NecromanticThralls_VEF
 {
     [HarmonyPatch(typeof(CompAnimalProduct))]
     class VEF_CompAnimalProduct_Active_Patch
