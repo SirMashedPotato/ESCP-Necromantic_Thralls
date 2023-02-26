@@ -56,7 +56,7 @@
 	<ThingDef ParentName="ESCP_NecromanticThralls_BookBase">
 		<defName>ESCP_NecromanticThralls_BookThrallLimit</defName>
 		<label>Ancient Sload tome (Thrall limit)</label>
-		<description>An ancient tome, thought to have been written by the great necromancer N'Gasta. The contents are almost completely incomprehensible, as they appear to have been written in Sloadic. But they appear to detail several ways of increasing the number of Necromantic Thralls one can control.\n\nThis tome appears to be exceptionally old, and will likely crumble into dust once someone has finished reading it.</description>
+		<description>An ancient tome, thought to have been written by the great necromancer N'Gasta. The contents are almost completely incomprehensible, as they appear to have been written in Sloadic. But they seem to detail ten different ways of increasing the number of Necromantic Thralls one can control. Sadly this tome appears to be exceptionally old, and will likely crumble to dust after translating a single chapter.</description>
 		<graphicData>
 			<texPath>Things/Item/Special/ESCP_NecromanticThralls_BookThrallLimit</texPath>
 		</graphicData>
