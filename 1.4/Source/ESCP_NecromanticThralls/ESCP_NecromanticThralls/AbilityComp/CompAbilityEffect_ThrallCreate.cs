@@ -42,31 +42,47 @@ namespace ESCP_NecromanticThralls
             if (t != null && t is Corpse c)
             {
                 Pawn p = c.InnerPawn;
-                if (p.Faction != parent.pawn.Faction)
+                ///VE Psycasts, possibly a framework problem, errors when ressurecting a pawn
+                ///Not normaly an issue, but it makes this ability shit the bed
+                ///I'm being lazy, but this works
+                try
                 {
-                    p.SetFaction(parent.pawn.Faction, parent.pawn);
+                    ResurrectionUtility.Resurrect(c.InnerPawn);
                 }
-                if (ModsConfig.IdeologyActive && p.RaceProps.Humanlike)
+                catch
                 {
-                    p.ideo.SetIdeo(parent.pawn.Ideo);
+                    
                 }
-                ResurrectionUtility.Resurrect(c.InnerPawn);
-                if (Props.hediff != null)
+                finally
                 {
-                    p.health.AddHediff(Props.hediff);
-                    p.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ESCP_NecromanticThralls_Enthralled).TryGetComp<HediffComp_Enthralled>().SetMaster(parent.pawn);
-                }
-                if (ESCP_NecromanticThralls_ModSettings.ThrallResSkillDecay && p.RaceProps.Humanlike)
-                {
-                    foreach (SkillRecord sr in p.skills.skills)
+                    if (p != null)
                     {
-                        if (!sr.TotallyDisabled && sr.Level > 3 && Rand.Chance(0.75f))
+                        if (p.Faction != parent.pawn.Faction)
                         {
-                            sr.Level -= sr.Level / 4;
+                            p.SetFaction(parent.pawn.Faction, parent.pawn);
                         }
+                        if (ModsConfig.IdeologyActive && p.RaceProps.Humanlike)
+                        {
+                            p.ideo.SetIdeo(parent.pawn.Ideo);
+                        }
+                        if (Props.hediff != null)
+                        {
+                            p.health.AddHediff(Props.hediff);
+                            p.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ESCP_NecromanticThralls_Enthralled).TryGetComp<HediffComp_Enthralled>().SetMaster(parent.pawn);
+                        }
+                        if (ESCP_NecromanticThralls_ModSettings.ThrallResSkillDecay && p.RaceProps.Humanlike)
+                        {
+                            foreach (SkillRecord sr in p.skills.skills)
+                            {
+                                if (!sr.TotallyDisabled && sr.Level > 3 && Rand.Chance(0.75f))
+                                {
+                                    sr.Level -= sr.Level / 4;
+                                }
+                            }
+                        }
+                        CompStorage().AddThrall(p);
                     }
                 }
-                CompStorage().AddThrall(p);
             }
         }
 
