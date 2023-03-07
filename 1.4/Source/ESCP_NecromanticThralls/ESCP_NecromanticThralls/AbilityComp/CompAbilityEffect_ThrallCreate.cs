@@ -57,6 +57,10 @@ namespace ESCP_NecromanticThralls
                 {
                     if (p != null)
                     {
+                        if (p.guest != null)
+                        {
+                            p.guest.interactionMode = PrisonerInteractionModeDefOf.NoInteraction;
+                        }
                         if (p.Faction != parent.pawn.Faction)
                         {
                             p.SetFaction(parent.pawn.Faction, parent.pawn);

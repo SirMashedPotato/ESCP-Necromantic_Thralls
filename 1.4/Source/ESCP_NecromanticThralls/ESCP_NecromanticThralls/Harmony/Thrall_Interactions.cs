@@ -25,4 +25,46 @@ namespace ESCP_NecromanticThralls
             }
         }
     }
+
+    [HarmonyPatch(typeof(JobGiver_GetHemogen))]
+    [HarmonyPatch("CanFeedOnPrisoner")]
+    public static class JobGiver_GetHemogen_CanFeedOnPrisoner_Patch
+    {
+        [HarmonyPostfix]
+        public static void CanFeedOnPrisoner_ThrallPatch(Pawn prisoner, ref AcceptanceReport __result)
+        {
+            if (__result && ThrallUtility.PawnIsThrall(prisoner))
+            {
+                __result = false;
+            }
+        }
+    }
+
+    [HarmonyPatch(typeof(Recipe_ExtractHemogen))]
+    [HarmonyPatch("CompletableEver")]
+    public static class Recipe_ExtractHemogen_CompletableEver_Patch
+    {
+        [HarmonyPostfix]
+        public static void CompletableEver_ThrallPatch(Pawn surgeryTarget, ref bool __result)
+        {
+            if (__result && ThrallUtility.PawnIsThrall(surgeryTarget))
+            {
+                __result = false;
+            }
+        }
+    }
+
+    [HarmonyPatch(typeof(Recipe_ExtractHemogen))]
+    [HarmonyPatch("CheckForWarnings")]
+    public static class Recipe_ExtractHemogen_CheckForWarnings_Patch
+    {
+        [HarmonyPostfix]
+        public static void CheckForWarnings_ThrallPatch(Pawn medPawn)
+        {
+            if (ThrallUtility.PawnIsThrall(medPawn))
+            {
+                Messages.Message("MessageCannotStartHemogenExtraction".Translate(medPawn.Named("PAWN")), medPawn, MessageTypeDefOf.NeutralEvent, false);
+            }
+        }
+    }
 }
