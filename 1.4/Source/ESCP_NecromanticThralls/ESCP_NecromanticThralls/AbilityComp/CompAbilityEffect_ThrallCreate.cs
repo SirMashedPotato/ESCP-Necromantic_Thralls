@@ -61,6 +61,7 @@ namespace ESCP_NecromanticThralls
                         {
                             p.guest.interactionMode = PrisonerInteractionModeDefOf.NoInteraction;
                         }
+                        RecruitUtility.Recruit(p, parent.pawn.Faction, parent.pawn);
                         if (p.Faction != parent.pawn.Faction)
                         {
                             p.SetFaction(parent.pawn.Faction, parent.pawn);
