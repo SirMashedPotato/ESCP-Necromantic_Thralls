@@ -16,7 +16,8 @@
 	<ESCP_NecromanticThralls_ThrallResSkillDecay>Enable thrall resurrection skill decay.</ESCP_NecromanticThralls_ThrallResSkillDecay>
 	<ESCP_NecromanticThralls_ThrallResSkillDecayTooltip>If enabled, resurrecting a pawn as a thrall will cause the level of all skills to decay, with a 25% chance the level does not decrease at all.\n\nA skill at level 20 will decrease by 5.\nA skill at level 10 will decrease by 2.\nA skill at level 5 will decrease by 1.\nA skill at, or below, level 3 will not decrease at all.</ESCP_NecromanticThralls_ThrallResSkillDecayTooltip>
 	<ESCP_NecromanticThralls_ThrallRotOnDeath>Enable thralls instantly rotting upon death.</ESCP_NecromanticThralls_ThrallRotOnDeath>
-	<ESCP_NecromanticThralls_ThrallRotOnDeath_Tooltip>This will prevent them from being entrahlled again, as you can not enthrall rotten or desiccated corpses.</ESCP_NecromanticThralls_ThrallRotOnDeath_Tooltip>
+	<ESCP_NecromanticThralls_ThrallRotOnDeath_Tooltip>This will prevent them from being enthralled again, as you can not enthrall rotten or desiccated corpses.</ESCP_NecromanticThralls_ThrallRotOnDeath_Tooltip>
+	<ESCP_NecromanticThralls_ThrallDeathOnDown>Enable thralls dying when their master is downed.</ESCP_NecromanticThralls_ThrallDeathOnDown>
 	
 	<ESCP_NecromanticThralls_ThrallDisableNeeds>Disable thrall needs.</ESCP_NecromanticThralls_ThrallDisableNeeds>
 	<ESCP_NecromanticThralls_ThrallDisableMoods>Disable thrall thoughts.</ESCP_NecromanticThralls_ThrallDisableMoods>

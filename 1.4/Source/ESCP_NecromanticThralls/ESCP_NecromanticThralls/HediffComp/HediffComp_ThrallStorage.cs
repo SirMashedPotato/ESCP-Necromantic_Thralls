@@ -124,7 +124,7 @@ namespace ESCP_NecromanticThralls
         {
             base.CompPostTick(ref severityAdjustment);
 
-            if (parent.pawn.Downed)
+            if (parent.pawn.Downed && ESCP_NecromanticThralls_ModSettings.ThrallDeathOnDown)
             {
                 KillThralls();
             }
