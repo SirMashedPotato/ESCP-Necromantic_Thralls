@@ -19,7 +19,7 @@ namespace ESCP_NecromanticThralls
         public override void DoSettingsWindowContents(Rect inRect)
         {
             Rect outerRect = new Rect(inRect.x, inRect.y, inRect.width, inRect.height);
-            Rect innerRect = new Rect(0f, 0f, inRect.width - 30, inRect.height * 2);
+            Rect innerRect = new Rect(0f, 0f, inRect.width - 30, inRect.height * 2.2f);
             Widgets.BeginScrollView(outerRect, ref scrollPosition, innerRect, true);
 
             Listing_Standard listing_Standard = new Listing_Standard();
@@ -109,6 +109,8 @@ namespace ESCP_NecromanticThralls
             listing_Standard.CheckboxLabeled("ESCP_NecromanticThralls_ThrallMentalBreaks".Translate(), ref settings.ESCP_NecromanticThralls_ThrallMentalBreaks);
             listing_Standard.Gap();
             listing_Standard.CheckboxLabeled("ESCP_NecromanticThralls_ThrallSocialInteractions".Translate(), ref settings.ESCP_NecromanticThralls_ThrallSocialInteractions);
+            listing_Standard.Gap();
+            listing_Standard.CheckboxLabeled("ESCP_NecromanticThralls_ThrallSocialInteractionsEntirely".Translate(), ref settings.ESCP_NecromanticThralls_ThrallSocialInteractionsEntirely, "ESCP_NecromanticThralls_ThrallSocialInteractionsEntirely_Tooltip".Translate());
             listing_Standard.Gap();
 
             listing_Standard.GapLine();

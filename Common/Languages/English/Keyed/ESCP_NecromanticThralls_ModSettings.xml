@@ -40,6 +40,8 @@
 	<ESCP_NecromanticThralls_ThrallInspirations>Disable thralls receiving inspirations.</ESCP_NecromanticThralls_ThrallInspirations>
 	<ESCP_NecromanticThralls_ThrallMentalBreaks>Disable thralls receiving mental breaks.</ESCP_NecromanticThralls_ThrallMentalBreaks>
 	<ESCP_NecromanticThralls_ThrallSocialInteractions>Disable thralls doing certain social interactions.</ESCP_NecromanticThralls_ThrallSocialInteractions>
+	<ESCP_NecromanticThralls_ThrallSocialInteractionsEntirely>Disable thralls doing every social interaction.</ESCP_NecromanticThralls_ThrallSocialInteractionsEntirely>
+	<ESCP_NecromanticThralls_ThrallSocialInteractionsEntirely_Tooltip>As this blocks every social interaction, thralls will be unable to warden, or similar jobs.</ESCP_NecromanticThralls_ThrallSocialInteractionsEntirely_Tooltip>
 	
 	<ESCP_NecromanticThralls_ThrallVEF_AnimalProducts>[VEF] Disable thralls producing resources.</ESCP_NecromanticThralls_ThrallVEF_AnimalProducts>
 	<ESCP_NecromanticThralls_ThrallVEF_AsexualReproduction>[VEF] Disable thralls reproducing asexually.</ESCP_NecromanticThralls_ThrallVEF_AsexualReproduction>
