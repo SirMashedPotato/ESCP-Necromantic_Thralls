@@ -4,10 +4,12 @@ using Verse;
 
 namespace ESCP_NecromanticThralls
 {
-    /* Works, unless something forcefully changes the level of the need
-     * 
+    /// <summary>
+    /// Works, unless something forcefully changes the level of the need
+    /// Other patches should cover that though
+    /// </summary>
     [HarmonyPatch(typeof(Need))]
-    class Need_CurLevel_Patch
+    class Need_IsFrozen_Patch
     {
         [HarmonyPrefix]
         [HarmonyPatch("IsFrozen", MethodType.Getter)]
@@ -15,8 +17,7 @@ namespace ESCP_NecromanticThralls
         {
             if (ESCP_NecromanticThralls_ModSettings.ThrallDisableNeeds && ThrallUtility.PawnIsThrall(___pawn))
             {
-                if (__instance.def.defName != "TM_Mana" && __instance.def.defName != "TM_Stamina"
-                    && !__instance.def.onlyIfCausedByGene && !__instance.def.onlyIfCausedByHediff)
+                if (__instance.def.defName != "TM_Mana" && __instance.def.defName != "TM_Stamina")
                 {
                     __result = true;
                     return false;
@@ -25,7 +26,6 @@ namespace ESCP_NecromanticThralls
             return true;
         }
     }
-    */
 
     [HarmonyPatch(typeof(Need))]
     class Need_ShowOnNeedList_Patch
@@ -36,8 +36,7 @@ namespace ESCP_NecromanticThralls
         {
             if (ESCP_NecromanticThralls_ModSettings.ThrallDisableNeeds && ThrallUtility.PawnIsThrall(___pawn))
             {
-                if (__instance.def.defName != "TM_Mana" && __instance.def.defName != "TM_Stamina"
-                    && !__instance.def.onlyIfCausedByGene && !__instance.def.onlyIfCausedByHediff)
+                if (__instance.def.defName != "TM_Mana" && __instance.def.defName != "TM_Stamina")
                 {
                     __result = false;
                     return false;
@@ -56,8 +55,7 @@ namespace ESCP_NecromanticThralls
         {
             if (ESCP_NecromanticThralls_ModSettings.ThrallDisableNeeds && ThrallUtility.PawnIsThrall(___pawn))
             {
-                if (__instance.def.defName != "TM_Mana" && __instance.def.defName != "TM_Stamina"
-                    && !__instance.def.onlyIfCausedByGene && !__instance.def.onlyIfCausedByHediff)
+                if (__instance.def.defName != "TM_Mana" && __instance.def.defName != "TM_Stamina")
                 {
                     __result = __instance.MaxLevel;
                     return false;
@@ -76,14 +74,65 @@ namespace ESCP_NecromanticThralls
         {
             if (ESCP_NecromanticThralls_ModSettings.ThrallDisableNeeds && ThrallUtility.PawnIsThrall(___pawn))
             {
-                if (__instance.def.defName != "TM_Mana" && __instance.def.defName != "TM_Stamina"
-                    && !__instance.def.onlyIfCausedByGene && !__instance.def.onlyIfCausedByHediff)
+                if (__instance.def.defName != "TM_Mana" && __instance.def.defName != "TM_Stamina")
                 {
                     __result = __instance.MaxLevel;
                     return false;
                 }
             }
             return true;
+        }
+    }
+
+    /// <summary>
+    /// Because Chemical just has to be special
+    /// </summary>
+
+    [HarmonyPatch(typeof(Need_Chemical_Any))]
+    class NeedChemicalAny_Disabled_Patch
+    {
+        [HarmonyPostfix]
+        [HarmonyPatch("Disabled", MethodType.Getter)]
+        public static void Disabled_ThrallPatch(ref Pawn ___pawn, ref bool __result)
+        {
+            if (!__result && ESCP_NecromanticThralls_ModSettings.ThrallDisableNeeds && ThrallUtility.PawnIsThrall(___pawn))
+            {
+                __result = true;
+            }
+        }
+    }
+
+    /// <summary>
+    /// Because Indoors just has to be special
+    /// </summary>
+    [HarmonyPatch(typeof(Need_Indoors))]
+    class NeedIndoors_Disabled_Patch
+    {
+        [HarmonyPostfix]
+        [HarmonyPatch("Disabled", MethodType.Getter)]
+        public static void Disabled_ThrallPatch(ref Pawn ___pawn, ref bool __result)
+        {
+            if (!__result && ESCP_NecromanticThralls_ModSettings.ThrallDisableNeeds && ThrallUtility.PawnIsThrall(___pawn))
+            {
+                __result = true;
+            }
+        }
+    }
+
+    /// <summary>
+    /// Because Outdoors just has to be special
+    /// </summary>
+    [HarmonyPatch(typeof(Need_Outdoors))]
+    class NeedOutdoors_Disabled_Patch
+    {
+        [HarmonyPostfix]
+        [HarmonyPatch("Disabled", MethodType.Getter)]
+        public static void Disabled_ThrallPatch(ref Pawn ___pawn, ref bool __result)
+        {
+            if (!__result && ESCP_NecromanticThralls_ModSettings.ThrallDisableNeeds && ThrallUtility.PawnIsThrall(___pawn))
+            {
+                __result = true;
+            }
         }
     }
 }
