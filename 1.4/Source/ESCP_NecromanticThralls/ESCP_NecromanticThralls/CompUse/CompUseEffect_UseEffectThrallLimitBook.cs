@@ -20,6 +20,7 @@ namespace ESCP_NecromanticThralls
 			HediffComp_ThrallStorage compStorage = hediffStorage.TryGetComp<HediffComp_ThrallStorage>();
 			compStorage.IncreaseThrallLimit(Props.limitIncrease);
 			Messages.Message("ESCP_NecromanticThralls_KnowledgeGained".Translate(usedBy.Name, parent.Label), usedBy, MessageTypeDefOf.PositiveEvent);
+			FleckMaker.ThrowDustPuff(parent.Position, parent.Map, 1f);
 			parent.Destroy();
 		}
 

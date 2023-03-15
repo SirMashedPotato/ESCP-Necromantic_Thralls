@@ -5,7 +5,7 @@ namespace ESCP_NecromanticThralls
 {
     public static class DebugTools
     {
-        [DebugAction("ESCP - Necromantic Thralls", "Clean Missing recromantic Thralls", false, false, actionType = DebugActionType.ToolMapForPawns, allowedGameStates = AllowedGameStates.PlayingOnMap)]
+        [DebugAction("ESCP - Necromantic Thralls", "Clean Missing necromantic Thralls", false, false, actionType = DebugActionType.ToolMapForPawns, allowedGameStates = AllowedGameStates.PlayingOnMap)]
         private static void Sload_CleanThrallList(Pawn p)
         {
             if (p.health != null)

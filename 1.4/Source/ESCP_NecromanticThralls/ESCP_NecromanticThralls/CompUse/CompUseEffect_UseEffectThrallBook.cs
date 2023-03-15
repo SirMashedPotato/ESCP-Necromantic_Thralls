@@ -25,6 +25,7 @@ namespace ESCP_NecromanticThralls
 				usedBy.health.AddHediff(Props.hediffDef);
 			}
 			Messages.Message("ESCP_NecromanticThralls_KnowledgeGained".Translate(usedBy.Name, parent.Label), usedBy, MessageTypeDefOf.PositiveEvent);
+			FleckMaker.ThrowDustPuff(parent.Position, parent.Map, 1f);
 			parent.Destroy();
 		}
 

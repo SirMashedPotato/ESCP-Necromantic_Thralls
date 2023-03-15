@@ -89,7 +89,7 @@ namespace ESCP_NecromanticThralls
         private static readonly bool ESCP_NecromanticThralls_ThrallCanDryad_def = false;
         private static readonly bool ESCP_NecromanticThralls_ThrallResSkillDecay_def = false;
         private static readonly bool ESCP_NecromanticThralls_ThrallRotOnDeath_def = false;
-        private static readonly bool ESCP_NecromanticThralls_ThrallDeathOnDown_def = true;
+        private static readonly bool ESCP_NecromanticThralls_ThrallDeathOnDown_def = false;
         private static readonly bool ESCP_NecromanticThralls_ThrallSkillLimit_def = false;
 
         private static readonly bool ESCP_NecromanticThralls_ThrallDisableNeeds_def = true;
