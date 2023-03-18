@@ -12,8 +12,12 @@
 		</thingCategories>
 		<tradeTags>
 			<li>Artifact</li>
+			<li>ExoticMisc</li>
 			<li>ESCP_Tome_NecromanticThralls</li>
 		</tradeTags>
+		<thingSetMakerTags>
+			<li>RewardStandardMidFreq</li>
+		</thingSetMakerTags>
 		<statBases>
 			<MarketValue>500</MarketValue>
 			<MaxHitPoints>20</MaxHitPoints>
