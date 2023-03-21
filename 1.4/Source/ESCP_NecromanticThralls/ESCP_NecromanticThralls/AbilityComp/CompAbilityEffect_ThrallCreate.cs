@@ -70,6 +70,13 @@ namespace ESCP_NecromanticThralls
                         {
                             p.ideo.SetIdeo(parent.pawn.Ideo);
                         }
+                        if (ESCP_NecromanticThralls_ModSettings.ThrallLimitedLifespan)
+                        {
+                            Hediff limitedLifeHediff = HediffMaker.MakeHediff(HediffDefOf.ESCP_NecromanticThralls_ThrallLifespan, p);
+                            HediffComp_Disappears hediffComp_Disappears = limitedLifeHediff.TryGetComp<HediffComp_Disappears>();
+                            hediffComp_Disappears.ticksToDisappear = ESCP_NecromanticThralls_ModSettings.ThrallLimitedLifespanDays * 60000;
+                            p.health.AddHediff(limitedLifeHediff, null, null, null);
+                        }
                         if (Props.hediff != null)
                         {
                             p.health.AddHediff(Props.hediff);

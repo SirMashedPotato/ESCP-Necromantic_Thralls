@@ -16,6 +16,8 @@ namespace ESCP_NecromanticThralls
         public static bool ThrallRotOnDeath => _instance.ESCP_NecromanticThralls_ThrallRotOnDeath;
         public static bool ThrallDeathOnDown => _instance.ESCP_NecromanticThralls_ThrallDeathOnDown;
         public static bool ThrallSkillLimit => _instance.ESCP_NecromanticThralls_ThrallSkillLimit;
+        public static bool ThrallLimitedLifespan => _instance.ESCP_NecromanticThralls_ThrallLimitedLifespan;
+        public static int ThrallLimitedLifespanDays => _instance.ESCP_NecromanticThralls_ThrallLimitedLifespanDays;
 
         public static bool ThrallDisableNeeds => _instance.ESCP_NecromanticThralls_ThrallDisableNeeds;
         public static bool ThrallDisableMoods => _instance.ESCP_NecromanticThralls_ThrallDisableMoods;
@@ -54,6 +56,8 @@ namespace ESCP_NecromanticThralls
         public bool ESCP_NecromanticThralls_ThrallRotOnDeath = ESCP_NecromanticThralls_ThrallRotOnDeath_def;
         public bool ESCP_NecromanticThralls_ThrallDeathOnDown = ESCP_NecromanticThralls_ThrallDeathOnDown_def;
         public bool ESCP_NecromanticThralls_ThrallSkillLimit = ESCP_NecromanticThralls_ThrallSkillLimit_def;
+        public bool ESCP_NecromanticThralls_ThrallLimitedLifespan = ESCP_NecromanticThralls_ThrallLimitedLifespan_def;
+        public int ESCP_NecromanticThralls_ThrallLimitedLifespanDays = ESCP_NecromanticThralls_ThrallLimitedLifespanDays_def;
 
         public bool ESCP_NecromanticThralls_ThrallDisableNeeds = ESCP_NecromanticThralls_ThrallDisableNeeds_def;
         public bool ESCP_NecromanticThralls_ThrallDisableMoods = ESCP_NecromanticThralls_ThrallDisableMoods_def;
@@ -91,6 +95,8 @@ namespace ESCP_NecromanticThralls
         private static readonly bool ESCP_NecromanticThralls_ThrallRotOnDeath_def = false;
         private static readonly bool ESCP_NecromanticThralls_ThrallDeathOnDown_def = false;
         private static readonly bool ESCP_NecromanticThralls_ThrallSkillLimit_def = false;
+        private static readonly bool ESCP_NecromanticThralls_ThrallLimitedLifespan_def = false;
+        private static readonly int ESCP_NecromanticThralls_ThrallLimitedLifespanDays_def = 15;
 
         private static readonly bool ESCP_NecromanticThralls_ThrallDisableNeeds_def = true;
         private static readonly bool ESCP_NecromanticThralls_ThrallDisableMoods_def = true;
@@ -135,6 +141,8 @@ namespace ESCP_NecromanticThralls
             Scribe_Values.Look(ref ESCP_NecromanticThralls_ThrallRotOnDeath, "ESCP_NecromanticThralls_ThrallRotOnDeath", ESCP_NecromanticThralls_ThrallRotOnDeath_def);
             Scribe_Values.Look(ref ESCP_NecromanticThralls_ThrallDeathOnDown, "ESCP_NecromanticThralls_ThrallDeathOnDown", ESCP_NecromanticThralls_ThrallDeathOnDown_def);
             Scribe_Values.Look(ref ESCP_NecromanticThralls_ThrallSkillLimit, "ESCP_NecromanticThralls_ThrallSkillLimit", ESCP_NecromanticThralls_ThrallSkillLimit_def);
+            Scribe_Values.Look(ref ESCP_NecromanticThralls_ThrallLimitedLifespan, "ESCP_NecromanticThralls_ThrallLimitedLifespan", ESCP_NecromanticThralls_ThrallLimitedLifespan_def);
+            Scribe_Values.Look(ref ESCP_NecromanticThralls_ThrallLimitedLifespanDays, "ESCP_NecromanticThralls_ThrallLimitedLifespanDays", ESCP_NecromanticThralls_ThrallLimitedLifespanDays_def);
 
             Scribe_Values.Look(ref ESCP_NecromanticThralls_ThrallDisableNeeds, "ESCP_NecromanticThralls_ThrallDisableNeeds", ESCP_NecromanticThralls_ThrallDisableNeeds_def);
             Scribe_Values.Look(ref ESCP_NecromanticThralls_ThrallDisableMoods, "ESCP_NecromanticThralls_ThrallDisableMoods", ESCP_NecromanticThralls_ThrallDisableMoods_def);
@@ -176,6 +184,8 @@ namespace ESCP_NecromanticThralls
             _instance.ESCP_NecromanticThralls_ThrallRotOnDeath = ESCP_NecromanticThralls_ThrallRotOnDeath_def;
             _instance.ESCP_NecromanticThralls_ThrallDeathOnDown = ESCP_NecromanticThralls_ThrallDeathOnDown_def;
             _instance.ESCP_NecromanticThralls_ThrallSkillLimit = ESCP_NecromanticThralls_ThrallSkillLimit_def;
+            _instance.ESCP_NecromanticThralls_ThrallLimitedLifespan = ESCP_NecromanticThralls_ThrallLimitedLifespan_def;
+            _instance.ESCP_NecromanticThralls_ThrallLimitedLifespanDays = ESCP_NecromanticThralls_ThrallLimitedLifespanDays_def;
 
             _instance.ESCP_NecromanticThralls_ThrallDisableNeeds = ESCP_NecromanticThralls_ThrallDisableNeeds_def;
             _instance.ESCP_NecromanticThralls_ThrallDisableMoods = ESCP_NecromanticThralls_ThrallDisableMoods_def;

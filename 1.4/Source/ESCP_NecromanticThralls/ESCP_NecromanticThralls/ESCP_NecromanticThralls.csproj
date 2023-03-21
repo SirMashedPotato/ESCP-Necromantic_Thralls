@@ -95,6 +95,7 @@
     <Compile Include="Harmony\Thrall_Thoughts.cs" />
     <Compile Include="Harmony\Thrall_Trading.cs" />
     <Compile Include="Harmony\Thrall_Training.cs" />
+    <Compile Include="HediffComp\HediffComp_KillOnRemove.cs" />
     <Compile Include="HediffComp\Props\HediffCompProperties_ThrallStorage.cs" />
     <Compile Include="ModSettings\ESCP_NecromanticThralls_Mod.cs" />
     <Compile Include="ModSettings\ESCP_NecromanticThralls_ModSettings.cs" />

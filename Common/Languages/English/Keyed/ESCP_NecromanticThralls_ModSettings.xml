@@ -18,6 +18,9 @@
 	<ESCP_NecromanticThralls_ThrallRotOnDeath>Enable thralls instantly rotting upon death.</ESCP_NecromanticThralls_ThrallRotOnDeath>
 	<ESCP_NecromanticThralls_ThrallRotOnDeath_Tooltip>This will prevent them from being enthralled again, as you can not enthrall rotten or desiccated corpses.</ESCP_NecromanticThralls_ThrallRotOnDeath_Tooltip>
 	<ESCP_NecromanticThralls_ThrallDeathOnDown>Enable thralls dying when their master is downed.</ESCP_NecromanticThralls_ThrallDeathOnDown>
+	<ESCP_NecromanticThralls_ThrallLimitedLifespan>Enable thralls having a limited lifespan.</ESCP_NecromanticThralls_ThrallLimitedLifespan>
+	<ESCP_NecromanticThralls_ThrallLimitedLifespanTooltip>This setting is not retroactive. It will only affect newly created thralls.\n\nUse the below slider to set the lifespan of the thralls.</ESCP_NecromanticThralls_ThrallLimitedLifespanTooltip>
+	<ESCP_NecromanticThralls_ThrallLimitedLifespanDays>The number of days until a thrall dies.</ESCP_NecromanticThralls_ThrallLimitedLifespanDays>
 	
 	<ESCP_NecromanticThralls_ThrallDisableNeeds>Disable thrall needs.</ESCP_NecromanticThralls_ThrallDisableNeeds>
 	<ESCP_NecromanticThralls_ThrallDisableMoods>Disable thrall thoughts.</ESCP_NecromanticThralls_ThrallDisableMoods>

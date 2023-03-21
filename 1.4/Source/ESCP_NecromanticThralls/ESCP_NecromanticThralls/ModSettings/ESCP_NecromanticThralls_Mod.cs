@@ -19,7 +19,7 @@ namespace ESCP_NecromanticThralls
         public override void DoSettingsWindowContents(Rect inRect)
         {
             Rect outerRect = new Rect(inRect.x, inRect.y, inRect.width, inRect.height);
-            Rect innerRect = new Rect(0f, 0f, inRect.width - 30, inRect.height * 2.2f);
+            Rect innerRect = new Rect(0f, 0f, inRect.width - 30, inRect.height * 2.4f);
             Widgets.BeginScrollView(outerRect, ref scrollPosition, innerRect, true);
 
             Listing_Standard listing_Standard = new Listing_Standard();
@@ -70,6 +70,13 @@ namespace ESCP_NecromanticThralls
             listing_Standard.Gap();
 
             listing_Standard.CheckboxLabeled("ESCP_NecromanticThralls_ThrallRotOnDeath".Translate(), ref settings.ESCP_NecromanticThralls_ThrallRotOnDeath, "ESCP_NecromanticThralls_ThrallRotOnDeath_Tooltip".Translate());
+            listing_Standard.Gap();
+
+            listing_Standard.CheckboxLabeled("ESCP_NecromanticThralls_ThrallLimitedLifespan".Translate(), ref settings.ESCP_NecromanticThralls_ThrallLimitedLifespan, "ESCP_NecromanticThralls_ThrallLimitedLifespanTooltip".Translate());
+            listing_Standard.Gap();
+
+            listing_Standard.Label("ESCP_NecromanticThralls_ThrallLimitedLifespanDays".Translate() + " (" + settings.ESCP_NecromanticThralls_ThrallLimitedLifespanDays + " day/s)");
+            settings.ESCP_NecromanticThralls_ThrallLimitedLifespanDays = (int)listing_Standard.Slider(settings.ESCP_NecromanticThralls_ThrallLimitedLifespanDays, 1, 120);
             listing_Standard.Gap();
 
             listing_Standard.GapLine();

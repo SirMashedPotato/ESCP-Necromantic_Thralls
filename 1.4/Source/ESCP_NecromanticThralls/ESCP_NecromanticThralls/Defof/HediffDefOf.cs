@@ -13,5 +13,6 @@ namespace ESCP_NecromanticThralls
 
 		public static HediffDef ESCP_NecromanticThralls_Enthralled;
 		public static HediffDef ESCP_NecromanticThralls_ThrallStorage;
+		public static HediffDef ESCP_NecromanticThralls_ThrallLifespan;
 	}
 }

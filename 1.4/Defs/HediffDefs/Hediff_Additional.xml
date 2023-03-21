@@ -96,4 +96,24 @@
 			</li>
 		</stages>
 	</HediffDef>
+	<!-- ========== [ESCP_NecromanticThralls_ThrallLifespan] ========== -->
+	<HediffDef>
+		<defName>ESCP_NecromanticThralls_ThrallLifespan</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>limited lifespan</label>
+		<description>This thrall has a limited lifespan. The connection to its master will be severed after a certain number of days.</description>
+		<defaultLabelColor>(0.8, 0.6, 1.0)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<showRemainingTime>True</showRemainingTime>
+			</li>
+			<li>
+				<compClass>ESCP_NecromanticThralls.HediffComp_KillOnRemove</compClass>
+			</li>
+			<li Class="HediffCompProperties_DisappearsOnDeath"/>
+		</comps>
+	</HediffDef>
 </Defs>
