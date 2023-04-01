@@ -22,6 +22,7 @@ namespace ESCP_NecromanticThralls
         public static bool ThrallDisableNeeds => _instance.ESCP_NecromanticThralls_ThrallDisableNeeds;
         public static bool ThrallDisableMoods => _instance.ESCP_NecromanticThralls_ThrallDisableMoods;
         public static bool ThrallDisableIdeoCertainty => _instance.ESCP_NecromanticThralls_ThrallIdeoCertainty;
+        public static bool ThrallIdeoChange => _instance.ESCP_NecromanticThralls_ThrallIdeoChange;
         public static bool ThrallDisableSkillLearning => _instance.ESCP_NecromanticThralls_ThrallSkillLearning;
         public static bool ThrallDisableSkillDecay => _instance.ESCP_NecromanticThralls_ThrallSkillDecay;
         public static bool ThrallDisableAgeing => _instance.ESCP_NecromanticThralls_ThrallAgeing;
@@ -62,6 +63,7 @@ namespace ESCP_NecromanticThralls
         public bool ESCP_NecromanticThralls_ThrallDisableNeeds = ESCP_NecromanticThralls_ThrallDisableNeeds_def;
         public bool ESCP_NecromanticThralls_ThrallDisableMoods = ESCP_NecromanticThralls_ThrallDisableMoods_def;
         public bool ESCP_NecromanticThralls_ThrallIdeoCertainty = ESCP_NecromanticThralls_ThrallIdeoCertainty_def;
+        public bool ESCP_NecromanticThralls_ThrallIdeoChange = ESCP_NecromanticThralls_ThrallIdeoChange_def;
         public bool ESCP_NecromanticThralls_ThrallSkillLearning = ESCP_NecromanticThralls_ThrallSkillLearning_def;
         public bool ESCP_NecromanticThralls_ThrallSkillDecay = ESCP_NecromanticThralls_ThrallSkillDecay_def;
         public bool ESCP_NecromanticThralls_ThrallAgeing = ESCP_NecromanticThralls_ThrallAgeing_def;
@@ -101,6 +103,7 @@ namespace ESCP_NecromanticThralls
         private static readonly bool ESCP_NecromanticThralls_ThrallDisableNeeds_def = true;
         private static readonly bool ESCP_NecromanticThralls_ThrallDisableMoods_def = true;
         private static readonly bool ESCP_NecromanticThralls_ThrallIdeoCertainty_def = true;
+        private static readonly bool ESCP_NecromanticThralls_ThrallIdeoChange_def = true;
         private static readonly bool ESCP_NecromanticThralls_ThrallSkillLearning_def = true;
         private static readonly bool ESCP_NecromanticThralls_ThrallSkillDecay_def = true;
         private static readonly bool ESCP_NecromanticThralls_ThrallAgeing_def = true;
@@ -147,6 +150,7 @@ namespace ESCP_NecromanticThralls
             Scribe_Values.Look(ref ESCP_NecromanticThralls_ThrallDisableNeeds, "ESCP_NecromanticThralls_ThrallDisableNeeds", ESCP_NecromanticThralls_ThrallDisableNeeds_def);
             Scribe_Values.Look(ref ESCP_NecromanticThralls_ThrallDisableMoods, "ESCP_NecromanticThralls_ThrallDisableMoods", ESCP_NecromanticThralls_ThrallDisableMoods_def);
             Scribe_Values.Look(ref ESCP_NecromanticThralls_ThrallIdeoCertainty, "ESCP_NecromanticThralls_ThrallIdeoCertainty", ESCP_NecromanticThralls_ThrallIdeoCertainty_def);
+            Scribe_Values.Look(ref ESCP_NecromanticThralls_ThrallIdeoChange, "ESCP_NecromanticThralls_ThrallIdeoChange", ESCP_NecromanticThralls_ThrallIdeoChange_def);
             Scribe_Values.Look(ref ESCP_NecromanticThralls_ThrallSkillLearning, "ESCP_NecromanticThralls_ThrallSkillLearning", ESCP_NecromanticThralls_ThrallSkillLearning_def);
             Scribe_Values.Look(ref ESCP_NecromanticThralls_ThrallSkillDecay, "ESCP_NecromanticThralls_ThrallSkillDecay", ESCP_NecromanticThralls_ThrallSkillDecay_def);
             Scribe_Values.Look(ref ESCP_NecromanticThralls_ThrallAgeing, "ESCP_NecromanticThralls_ThrallAgeing", ESCP_NecromanticThralls_ThrallAgeing_def);
@@ -190,6 +194,7 @@ namespace ESCP_NecromanticThralls
             _instance.ESCP_NecromanticThralls_ThrallDisableNeeds = ESCP_NecromanticThralls_ThrallDisableNeeds_def;
             _instance.ESCP_NecromanticThralls_ThrallDisableMoods = ESCP_NecromanticThralls_ThrallDisableMoods_def;
             _instance.ESCP_NecromanticThralls_ThrallIdeoCertainty = ESCP_NecromanticThralls_ThrallIdeoCertainty_def;
+            _instance.ESCP_NecromanticThralls_ThrallIdeoChange = ESCP_NecromanticThralls_ThrallIdeoChange_def;
             _instance.ESCP_NecromanticThralls_ThrallSkillLearning = ESCP_NecromanticThralls_ThrallSkillLearning_def;
             _instance.ESCP_NecromanticThralls_ThrallSkillDecay = ESCP_NecromanticThralls_ThrallSkillDecay_def;
             _instance.ESCP_NecromanticThralls_ThrallAgeing = ESCP_NecromanticThralls_ThrallAgeing_def;

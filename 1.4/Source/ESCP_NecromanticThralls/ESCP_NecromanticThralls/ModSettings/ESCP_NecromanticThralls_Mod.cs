@@ -50,10 +50,10 @@ namespace ESCP_NecromanticThralls
             listing_Standard.CheckboxLabeled("ESCP_NecromanticThralls_ThrallNamesArePurple".Translate(), ref settings.ESCP_NecromanticThralls_ThrallNamesArePurple);
             listing_Standard.Gap();
 
-            listing_Standard.CheckboxLabeled("ESCP_NecromanticThralls_ThrallNamesColourTranspilerA".Translate(), ref settings.ESCP_NecromanticThralls_ThrallNamesColourTranspilerA, "ESCP_NecromanticThralls_ThrallNamesColourTranspilerTooltip".Translate());
+            listing_Standard.CheckboxLabeled("ESCP_NecromanticThralls_ThrallNamesColourTranspilerA".Translate(), ref settings.ESCP_NecromanticThralls_ThrallNamesColourTranspilerA, "ESCP_NecromanticThralls_ThrallNamesColourTranspiler_Tooltip".Translate());
             listing_Standard.Gap();
 
-            listing_Standard.CheckboxLabeled("ESCP_NecromanticThralls_ThrallNamesColourTranspilerB".Translate(), ref settings.ESCP_NecromanticThralls_ThrallNamesColourTranspilerB, "ESCP_NecromanticThralls_ThrallNamesColourTranspilerTooltip".Translate());
+            listing_Standard.CheckboxLabeled("ESCP_NecromanticThralls_ThrallNamesColourTranspilerB".Translate(), ref settings.ESCP_NecromanticThralls_ThrallNamesColourTranspilerB, "ESCP_NecromanticThralls_ThrallNamesColourTranspiler_Tooltip".Translate());
             listing_Standard.Gap();
 
             listing_Standard.GapLine();
@@ -66,13 +66,13 @@ namespace ESCP_NecromanticThralls
             listing_Standard.CheckboxLabeled("ESCP_NecromanticThralls_ThrallDeathOnDown".Translate(), ref settings.ESCP_NecromanticThralls_ThrallDeathOnDown);
             listing_Standard.Gap();
 
-            listing_Standard.CheckboxLabeled("ESCP_NecromanticThralls_ThrallResSkillDecay".Translate(), ref settings.ESCP_NecromanticThralls_ThrallResSkillDecay, "ESCP_NecromanticThralls_ThrallResSkillDecayTooltip".Translate());
+            listing_Standard.CheckboxLabeled("ESCP_NecromanticThralls_ThrallResSkillDecay".Translate(), ref settings.ESCP_NecromanticThralls_ThrallResSkillDecay, "ESCP_NecromanticThralls_ThrallResSkillDecay_Tooltip".Translate());
             listing_Standard.Gap();
 
             listing_Standard.CheckboxLabeled("ESCP_NecromanticThralls_ThrallRotOnDeath".Translate(), ref settings.ESCP_NecromanticThralls_ThrallRotOnDeath, "ESCP_NecromanticThralls_ThrallRotOnDeath_Tooltip".Translate());
             listing_Standard.Gap();
 
-            listing_Standard.CheckboxLabeled("ESCP_NecromanticThralls_ThrallLimitedLifespan".Translate(), ref settings.ESCP_NecromanticThralls_ThrallLimitedLifespan, "ESCP_NecromanticThralls_ThrallLimitedLifespanTooltip".Translate());
+            listing_Standard.CheckboxLabeled("ESCP_NecromanticThralls_ThrallLimitedLifespan".Translate(), ref settings.ESCP_NecromanticThralls_ThrallLimitedLifespan, "ESCP_NecromanticThralls_ThrallLimitedLifespan_Tooltip".Translate());
             listing_Standard.Gap();
 
             listing_Standard.Label("ESCP_NecromanticThralls_ThrallLimitedLifespanDays".Translate() + " (" + settings.ESCP_NecromanticThralls_ThrallLimitedLifespanDays + " day/s)");
@@ -92,6 +92,8 @@ namespace ESCP_NecromanticThralls
             listing_Standard.CheckboxLabeled("ESCP_NecromanticThralls_ThrallSkillDecay".Translate(), ref settings.ESCP_NecromanticThralls_ThrallSkillDecay);
             listing_Standard.Gap();
             listing_Standard.CheckboxLabeled("ESCP_NecromanticThralls_ThrallIdeoCertainty".Translate(), ref settings.ESCP_NecromanticThralls_ThrallIdeoCertainty);
+            listing_Standard.Gap();
+            listing_Standard.CheckboxLabeled("ESCP_NecromanticThralls_ThrallIdeoChange".Translate(), ref settings.ESCP_NecromanticThralls_ThrallIdeoChange, "ESCP_NecromanticThralls_ThrallIdeoChange_Tooltip".Translate());
             listing_Standard.Gap();
             listing_Standard.CheckboxLabeled("ESCP_NecromanticThralls_ThrallAgeing".Translate(), ref settings.ESCP_NecromanticThralls_ThrallAgeing);
             listing_Standard.Gap();

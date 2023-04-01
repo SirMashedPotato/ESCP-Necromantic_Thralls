@@ -19,4 +19,19 @@ namespace ESCP_NecromanticThralls
             return true;
         }
     }
+
+    [HarmonyPatch(typeof(Pawn_IdeoTracker))]
+    [HarmonyPatch("SetIdeo")]
+    public static class Pawn_IdeoTracker_SetIdeo_Patch
+    {
+        [HarmonyPrefix]
+        public static bool SetIdeo_ThrallPatch(ref Pawn ___pawn)
+        {
+            if (ESCP_NecromanticThralls_ModSettings.ThrallIdeoChange && ThrallUtility.PawnIsThrall(___pawn))
+            {
+                return false;
+            }
+            return true;
+        }
+    }
 }
