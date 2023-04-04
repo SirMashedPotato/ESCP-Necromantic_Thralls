@@ -60,6 +60,9 @@ namespace ESCP_NecromanticThralls
             listing_Standard.Gap();
 
             ///Extras, default to disabled
+            listing_Standard.CheckboxLabeled("ESCP_NecromanticThralls_ThrallCanDesiccated".Translate(), ref settings.ESCP_NecromanticThralls_ThrallCanDesiccated, "ESCP_NecromanticThralls_ThrallCanDesiccated_Tooltip".Translate());
+            listing_Standard.Gap();
+
             listing_Standard.CheckboxLabeled("ESCP_NecromanticThralls_ThrallCanDryad".Translate(), ref settings.ESCP_NecromanticThralls_ThrallCanDryad);
             listing_Standard.Gap();
 

@@ -27,7 +27,7 @@ namespace ESCP_NecromanticThralls
                 {
                     return false;
                 }
-                if (c.InnerPawn.RaceProps.IsFlesh && c.GetRotStage() == RotStage.Fresh)
+                if (c.InnerPawn.RaceProps.IsFlesh && (c.GetRotStage() == RotStage.Fresh || ESCP_NecromanticThralls_ModSettings.ThrallCanDesiccated))
                 {
                     return true;
                 }
