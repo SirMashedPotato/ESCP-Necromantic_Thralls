@@ -36,6 +36,7 @@ namespace ESCP_NecromanticThralls
         public static bool ThrallDisableMentalBreaks => _instance.ESCP_NecromanticThralls_ThrallMentalBreaks;
         public static bool ThrallDisableSocialInteractions => _instance.ESCP_NecromanticThralls_ThrallSocialInteractions;
         public static bool ThrallSocialInteractionsEntirely => _instance.ESCP_NecromanticThralls_ThrallSocialInteractionsEntirely;
+        public static bool ThrallBloodfeedTarget => _instance.ESCP_NecromanticThralls_ThrallBloodfeedTarget;
 
 
         public static bool ThrallDisableMilkable => _instance.ESCP_NecromanticThralls_ThrallMilkable;
@@ -78,6 +79,7 @@ namespace ESCP_NecromanticThralls
         public bool ESCP_NecromanticThralls_ThrallMentalBreaks = ESCP_NecromanticThralls_ThrallMentalBreaks_def;
         public bool ESCP_NecromanticThralls_ThrallSocialInteractions = ESCP_NecromanticThralls_ThrallSocialInteractions_def;
         public bool ESCP_NecromanticThralls_ThrallSocialInteractionsEntirely = ESCP_NecromanticThralls_ThrallSocialInteractionsEntirely_def;
+        public bool ESCP_NecromanticThralls_ThrallBloodfeedTarget = ESCP_NecromanticThralls_ThrallBloodfeedTarget_def;
 
         public bool ESCP_NecromanticThralls_ThrallMilkable = ESCP_NecromanticThralls_ThrallMilkable_def;
         public bool ESCP_NecromanticThralls_ThrallShearable = ESCP_NecromanticThralls_ThrallShearable_def;
@@ -119,6 +121,7 @@ namespace ESCP_NecromanticThralls
         private static readonly bool ESCP_NecromanticThralls_ThrallMentalBreaks_def = true;
         private static readonly bool ESCP_NecromanticThralls_ThrallSocialInteractions_def = true;
         private static readonly bool ESCP_NecromanticThralls_ThrallSocialInteractionsEntirely_def = false;
+        private static readonly bool ESCP_NecromanticThralls_ThrallBloodfeedTarget_def = true;
 
         private static readonly bool ESCP_NecromanticThralls_ThrallMilkable_def = true;
         private static readonly bool ESCP_NecromanticThralls_ThrallShearable_def = true;
@@ -167,6 +170,7 @@ namespace ESCP_NecromanticThralls
             Scribe_Values.Look(ref ESCP_NecromanticThralls_ThrallMentalBreaks, "ESCP_NecromanticThralls_ThrallMentalBreaks", ESCP_NecromanticThralls_ThrallMentalBreaks_def);
             Scribe_Values.Look(ref ESCP_NecromanticThralls_ThrallSocialInteractions, "ESCP_NecromanticThralls_ThrallSocialInteractions", ESCP_NecromanticThralls_ThrallSocialInteractions_def);
             Scribe_Values.Look(ref ESCP_NecromanticThralls_ThrallSocialInteractionsEntirely, "ESCP_NecromanticThralls_ThrallSocialInteractionsEntirely", ESCP_NecromanticThralls_ThrallSocialInteractionsEntirely_def);
+            Scribe_Values.Look(ref ESCP_NecromanticThralls_ThrallBloodfeedTarget, "ESCP_NecromanticThralls_ThrallBloodfeedTarget", ESCP_NecromanticThralls_ThrallBloodfeedTarget_def);
 
             Scribe_Values.Look(ref ESCP_NecromanticThralls_ThrallMilkable, "ESCP_NecromanticThralls_ThrallMilkable", ESCP_NecromanticThralls_ThrallMilkable_def);
             Scribe_Values.Look(ref ESCP_NecromanticThralls_ThrallShearable, "ESCP_NecromanticThralls_ThrallShearable", ESCP_NecromanticThralls_ThrallShearable_def);
@@ -212,6 +216,7 @@ namespace ESCP_NecromanticThralls
             _instance.ESCP_NecromanticThralls_ThrallMentalBreaks = ESCP_NecromanticThralls_ThrallMentalBreaks_def;
             _instance.ESCP_NecromanticThralls_ThrallSocialInteractions = ESCP_NecromanticThralls_ThrallSocialInteractions_def;
             _instance.ESCP_NecromanticThralls_ThrallSocialInteractionsEntirely = ESCP_NecromanticThralls_ThrallSocialInteractionsEntirely_def;
+            _instance.ESCP_NecromanticThralls_ThrallBloodfeedTarget = ESCP_NecromanticThralls_ThrallBloodfeedTarget_def;
 
             _instance.ESCP_NecromanticThralls_ThrallMilkable = ESCP_NecromanticThralls_ThrallMilkable_def;
             _instance.ESCP_NecromanticThralls_ThrallShearable = ESCP_NecromanticThralls_ThrallShearable_def;

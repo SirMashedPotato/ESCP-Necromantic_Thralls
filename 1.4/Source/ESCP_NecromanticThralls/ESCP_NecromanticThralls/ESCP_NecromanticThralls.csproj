@@ -83,6 +83,7 @@
     <Compile Include="Harmony\HarmonyInstance.cs" />
     <Compile Include="Harmony\Thrall_Ageing.cs" />
     <Compile Include="Harmony\Thrall_AnimalMating.cs" />
+    <Compile Include="Harmony\Thrall_Biotech.cs" />
     <Compile Include="Harmony\Thrall_HediffGivers.cs" />
     <Compile Include="Harmony\Thrall_Ideo.cs" />
     <Compile Include="Harmony\Thrall_Inspirations.cs" />

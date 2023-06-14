@@ -19,7 +19,7 @@ namespace ESCP_NecromanticThralls
         public override void DoSettingsWindowContents(Rect inRect)
         {
             Rect outerRect = new Rect(inRect.x, inRect.y, inRect.width, inRect.height);
-            Rect innerRect = new Rect(0f, 0f, inRect.width - 30, inRect.height * 2.4f);
+            Rect innerRect = new Rect(0f, 0f, inRect.width - 30, inRect.height * 2.8f);
             Widgets.BeginScrollView(outerRect, ref scrollPosition, innerRect, true);
 
             Listing_Standard listing_Standard = new Listing_Standard();
@@ -99,6 +99,9 @@ namespace ESCP_NecromanticThralls
             listing_Standard.CheckboxLabeled("ESCP_NecromanticThralls_ThrallIdeoChange".Translate(), ref settings.ESCP_NecromanticThralls_ThrallIdeoChange, "ESCP_NecromanticThralls_ThrallIdeoChange_Tooltip".Translate());
             listing_Standard.Gap();
             listing_Standard.CheckboxLabeled("ESCP_NecromanticThralls_ThrallAgeing".Translate(), ref settings.ESCP_NecromanticThralls_ThrallAgeing);
+            listing_Standard.Gap();
+
+            listing_Standard.CheckboxLabeled("ESCP_NecromanticThralls_ThrallBloodfeedTarget".Translate(), ref settings.ESCP_NecromanticThralls_ThrallBloodfeedTarget, "ESCP_NecromanticThralls_ThrallBloodfeedTarget_Tooltip".Translate());
             listing_Standard.Gap();
 
             listing_Standard.GapLine();
