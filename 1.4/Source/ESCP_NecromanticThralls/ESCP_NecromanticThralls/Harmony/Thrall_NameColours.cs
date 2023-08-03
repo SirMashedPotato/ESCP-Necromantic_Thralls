@@ -53,31 +53,28 @@ namespace ESCP_NecromanticThralls
         [HarmonyTranspiler]
         static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
         {
-            if (ESCP_NecromanticThralls_ModSettings.ThrallNamesColourTranspilerA)
+            var codes = new List<CodeInstruction>(instructions);
+            //used for checking for the right function call
+            var target = AccessTools.Method(typeof(Widgets), nameof(Widgets.Label), new Type[] { typeof(Rect), typeof(string) });
+            //function that is called
+            var isThrall = AccessTools.Method(typeof(ThrallTextColour), nameof(ThrallTextColour.ThrallColourChanger));
+
+            //find the right position in the stack
+            for (int i = 0; i < codes.Count; i++)
             {
-                var codes = new List<CodeInstruction>(instructions);
-                //used for checking for the right function call
-                var target = AccessTools.Method(typeof(Widgets), nameof(Widgets.Label), new Type[] { typeof(Rect), typeof(string) });
-                //function that is called
-                var isThrall = AccessTools.Method(typeof(ThrallTextColour), nameof(ThrallTextColour.ThrallColourChanger));
-
-                //find the right position in the stack
-                for (int i = 0; i < codes.Count; i++)
+                if (ESCP_NecromanticThralls_ModSettings.ThrallNamesColourTranspilerA && codes[i].opcode == OpCodes.Call && codes[i].operand == target)
                 {
-                    if (codes[i].opcode == OpCodes.Call && codes[i].operand == target)
-                    {
-                        var original = codes[i];    //store original method, return after
-                        //loc 2 = rectangle
-                        //loc 1 = string
-                        yield return new CodeInstruction(OpCodes.Ldarg_2); //load pawn
-                        yield return new CodeInstruction(OpCodes.Call, isThrall);   //add in custom check
-                        yield return original;  //return original after
+                    var original = codes[i];    //store original method, return after
+                                                //loc 2 = rectangle
+                                                //loc 1 = string
+                    yield return new CodeInstruction(OpCodes.Ldarg_2); //load pawn
+                    yield return new CodeInstruction(OpCodes.Call, isThrall);   //add in custom check
+                    yield return original;  //return original after
 
-                    }
-                    else
-                    {
-                        yield return codes[i];
-                    }
+                }
+                else
+                {
+                    yield return codes[i];
                 }
             }
         }
@@ -91,28 +88,25 @@ namespace ESCP_NecromanticThralls
         [HarmonyTranspiler]
         static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
         {
-            if (ESCP_NecromanticThralls_ModSettings.ThrallNamesColourTranspilerB)
+            var codes = new List<CodeInstruction>(instructions);
+            //used for checking for the right function call
+            var target = AccessTools.Method(typeof(TransferableUIUtility), nameof(TransferableUIUtility.DrawTransferableInfo), new Type[] { typeof(TransferableOneWay), typeof(Rect), typeof(Color) });
+            //function that is called
+            var isThrall = AccessTools.Method(typeof(ThrallTextColour), nameof(ThrallTextColour.GetThrallColour));
+            //find the right position in the stack
+            for (int i = 0; i < codes.Count; i++)
             {
-                var codes = new List<CodeInstruction>(instructions);
-                //used for checking for the right function call
-                var target = AccessTools.Method(typeof(TransferableUIUtility), nameof(TransferableUIUtility.DrawTransferableInfo), new Type[] { typeof(TransferableOneWay), typeof(Rect), typeof(Color) });
-                //function that is called
-                var isThrall = AccessTools.Method(typeof(ThrallTextColour), nameof(ThrallTextColour.GetThrallColour));
-                //find the right position in the stack
-                for (int i = 0; i < codes.Count; i++)
+                if (ESCP_NecromanticThralls_ModSettings.ThrallNamesColourTranspilerB && codes[i].opcode == OpCodes.Call && codes[i].operand == target)
                 {
-                    if (codes[i].opcode == OpCodes.Call && codes[i].operand == target)
-                    {
-                        var original = codes[i];    //store original method, return after
-                        //label string already loaded
-                        yield return new CodeInstruction(OpCodes.Ldloc_2);  //load pawn
-                        yield return new CodeInstruction(OpCodes.Call, isThrall);   //add in custom check
-                        yield return original;  //return original after
-                    }
-                    else
-                    {
-                        yield return codes[i];
-                    }
+                    var original = codes[i];    //store original method, return after
+                                                //label string already loaded
+                    yield return new CodeInstruction(OpCodes.Ldloc_2);  //load pawn
+                    yield return new CodeInstruction(OpCodes.Call, isThrall);   //add in custom check
+                    yield return original;  //return original after
+                }
+                else
+                {
+                    yield return codes[i];
                 }
             }
         }
