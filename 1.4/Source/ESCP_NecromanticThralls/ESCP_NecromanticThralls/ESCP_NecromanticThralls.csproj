@@ -79,6 +79,7 @@
     <Compile Include="CompUse\Props\CompProperties_UseEffectThrallLimitBook.cs" />
     <Compile Include="DefOf\InteractionDefOf.cs" />
     <Compile Include="DefOf\ThoughtDefOf.cs" />
+    <Compile Include="Gene\Gene_Necromancer.cs" />
     <Compile Include="Gizmo\Gizmo_ThrallLimit.cs" />
     <Compile Include="Harmony\HarmonyInstance.cs" />
     <Compile Include="Harmony\Thrall_Ageing.cs" />

@@ -20,6 +20,8 @@
 	<ESCP_NecromanticThralls_BookAlreadyRead>{0} already has the knowledge of what this tome contains.</ESCP_NecromanticThralls_BookAlreadyRead>
 	<ESCP_NecromanticThralls_BookRequiresKnowledge>{0} does not have the required knowledge of Necromantic Thralls.</ESCP_NecromanticThralls_BookRequiresKnowledge>
 	<ESCP_NecromanticThralls_KnowledgeGained>{0} has finished reading {1}, though the tome appears to have crumbled into dust.</ESCP_NecromanticThralls_KnowledgeGained>
+	<!-- Misc -->
+	<ESCP_NecromanticThralls_PawnIsThrall>{0} is a necromantic thrall</ESCP_NecromanticThralls_PawnIsThrall>
 	<!-- Debug -->
 	<ESCP_NecromanticThralls_CleanThrallList_Message>Cleaned thrall list for {0}, removing {1} missing pawns</ESCP_NecromanticThralls_CleanThrallList_Message>
 </LanguageData>

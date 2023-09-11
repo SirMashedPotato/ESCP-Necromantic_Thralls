@@ -5,6 +5,27 @@ using Verse;
 namespace ESCP_NecromanticThralls
 {
     /// <summary>
+    /// Subcore scanning related
+    /// </summary>
+
+    [HarmonyPatch(typeof(Building_SubcoreScanner))]
+    [HarmonyPatch("CanAcceptPawn")]
+    public static class Building_SubcoreScanner_CanAcceptPawn_Patch
+    {
+        [HarmonyPostfix]
+        public static void SubcoreScanner_CanAcceptPawn_ThrallPatch(Pawn selPawn, ref AcceptanceReport __result)
+        {
+            if (__result && selPawn != null)
+            {
+                if (ThrallUtility.PawnIsThrall(selPawn))
+                {
+                    __result = "ESCP_NecromanticThralls_PawnIsThrall".Translate(selPawn.Name);
+                }
+            }
+        }
+    }
+
+    /// <summary>
     /// Ability related
     /// </summary>
 
@@ -41,7 +62,7 @@ namespace ESCP_NecromanticThralls
             {
                 if (ESCP_NecromanticThralls_ModSettings.ThrallBloodfeedTarget && ThrallUtility.PawnIsThrall(prisoner))
                 {
-                    __result = false;
+                    __result = "ESCP_NecromanticThralls_PawnIsThrall".Translate(prisoner.Name);
                 }
             }
         }
