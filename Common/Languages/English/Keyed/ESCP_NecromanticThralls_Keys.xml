@@ -13,7 +13,7 @@
 	<ESCP_NecromanticThralls_KillThrall>Sever Connection</ESCP_NecromanticThralls_KillThrall>
 	<ESCP_NecromanticThralls_Kill_Tooltip>Sever this thralls connection to {0}, effectively killing it... again.</ESCP_NecromanticThralls_Kill_Tooltip>
 	<ESCP_NecromanticThralls_SelectAllThralls>Select all thralls</ESCP_NecromanticThralls_SelectAllThralls>
-	<ESCP_NecromanticThralls_SelectAllThralls_Tooltip>Select all thralls controlled by this necromancer.\n\nCurrent thralls:\n{0}</ESCP_NecromanticThralls_SelectAllThralls_Tooltip>
+	<ESCP_NecromanticThralls_SelectAllThralls_Tooltip>Select all thralls controlled by this necromancer.\n\nCurrent thralls:\n{0}\n\nRight click to sever the connection to individual thralls.</ESCP_NecromanticThralls_SelectAllThralls_Tooltip>
 	<ESCP_NecromanticThralls_SelectMaster>Select master</ESCP_NecromanticThralls_SelectMaster>
 	<ESCP_NecromanticThralls_SelectMaster_Tooltip>Select {0}, the necromancer that controls this thrall.</ESCP_NecromanticThralls_SelectMaster_Tooltip>
 	<!-- Books -->

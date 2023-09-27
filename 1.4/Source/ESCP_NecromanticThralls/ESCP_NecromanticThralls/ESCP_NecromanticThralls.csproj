@@ -81,6 +81,7 @@
     <Compile Include="DefOf\ThoughtDefOf.cs" />
     <Compile Include="Gene\Gene_Necromancer.cs" />
     <Compile Include="Gizmo\Gizmo_ThrallLimit.cs" />
+    <Compile Include="Gizmo\Gizmo_ThrallSever.cs" />
     <Compile Include="Harmony\HarmonyInstance.cs" />
     <Compile Include="Harmony\Thrall_Ageing.cs" />
     <Compile Include="Harmony\Thrall_AnimalMating.cs" />

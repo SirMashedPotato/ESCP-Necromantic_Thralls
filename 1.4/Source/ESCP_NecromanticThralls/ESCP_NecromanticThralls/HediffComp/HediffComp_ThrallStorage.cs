@@ -23,6 +23,7 @@ namespace ESCP_NecromanticThralls
         public int extraThrallLimit = 0;
 
         private Gizmo_ThrallLimit thrallLimitGizmo;
+        private Gizmo_SeverThrall thrallSeverGizmo;
 
         public override void CompExposeData()
         {
@@ -142,25 +143,33 @@ namespace ESCP_NecromanticThralls
                 thrallLimitGizmo = new Gizmo_ThrallLimit(this);
             }
             yield return thrallLimitGizmo;
-            yield return new Command_Action
+
+            if (thrallSeverGizmo == null)
             {
-                defaultLabel = "ESCP_NecromanticThralls_SelectAllThralls".Translate(),
-                defaultDesc = "ESCP_NecromanticThralls_SelectAllThralls_Tooltip".Translate(GetThrallList()),
-                icon = ContentFinder<Texture2D>.Get("UI/Gizmos/ESCP_NecromanticThralls_SelectAllThralls", true),
-                disabled = thrallsList.Count <= 0,
-                onHover = delegate ()
+                thrallSeverGizmo = new Gizmo_SeverThrall(this)
                 {
-                    ShowThralls();
-                },
-                action = delegate ()
-                {
-                    Find.Selector.ClearSelection();
-                    foreach(Pawn p in thrallsList)
+                    defaultLabel = "ESCP_NecromanticThralls_SelectAllThralls".Translate(),
+                    icon = ContentFinder<Texture2D>.Get("UI/Gizmos/ESCP_NecromanticThralls_SelectAllThralls", true),
+                    disabled = thrallsList.Count <= 0,
+                    onHover = delegate ()
                     {
-                        Find.Selector.Select(p, true, true);
+                        ShowThralls();
+                    },
+                    action = delegate ()
+                    {
+                        Find.Selector.ClearSelection();
+                        foreach (Pawn p in thrallsList)
+                        {
+                            if (p.Spawned)
+                            {
+                                Find.Selector.Select(p, true, true);
+                            }
+                        }
                     }
-                }
-            };
+                };
+            }
+            thrallSeverGizmo.defaultDesc = "ESCP_NecromanticThralls_SelectAllThralls_Tooltip".Translate(GetThrallList());
+            yield return thrallSeverGizmo;
         }
 
         public StringBuilder GetThrallList()
