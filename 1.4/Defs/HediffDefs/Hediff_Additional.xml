@@ -53,6 +53,7 @@
 		<scenarioCanAdd>false</scenarioCanAdd>
 		<maxSeverity>1.0</maxSeverity>
 		<isBad>false</isBad>
+		<preventsLungRot>true</preventsLungRot>
 		<!-- Needs disabling is done through Harmony patches, because doing it through hediffs apparently breaks shit -->
 		<comps>
 			<li Class="HediffCompProperties_Effecter">
