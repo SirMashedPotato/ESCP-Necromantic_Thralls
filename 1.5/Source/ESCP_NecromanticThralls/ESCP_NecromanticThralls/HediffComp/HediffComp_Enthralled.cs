@@ -96,7 +96,7 @@ namespace ESCP_NecromanticThralls
 			base.CompPostPostRemoved();
 		}
 
-		public override void Notify_PawnDied()
+		public override void Notify_PawnDied(DamageInfo? dinfo, Hediff culprit = null)
 		{
             if (ESCP_NecromanticThralls_ModSettings.ThrallRotOnDeath)
             {
@@ -110,7 +110,7 @@ namespace ESCP_NecromanticThralls
 					}
 				}
 			}
-			base.Notify_PawnDied();
+			base.Notify_PawnDied(dinfo, culprit);
 		}
 
 		public override string CompLabelInBracketsExtra => master?.Name.ToString();

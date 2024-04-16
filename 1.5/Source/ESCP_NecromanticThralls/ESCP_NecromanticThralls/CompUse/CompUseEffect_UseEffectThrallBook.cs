@@ -29,19 +29,17 @@ namespace ESCP_NecromanticThralls
 			parent.Destroy();
 		}
 
-		public override bool CanBeUsedBy(Pawn p, out string failReason)
-		{
+        public override AcceptanceReport CanBeUsedBy(Pawn p)
+        {
 			if (Props.abilityDef != null && p.abilities.GetAbility(Props.abilityDef) != null)
 			{
-				failReason = "ESCP_NecromanticThralls_BookAlreadyRead".Translate(p.Name);
-				return false;
+				return "ESCP_NecromanticThralls_BookAlreadyRead".Translate(p.Name);
 			}
 			if (Props.hediffDef != null && p.health.hediffSet.HasHediff(Props.hediffDef))
 			{
-				failReason = "ESCP_NecromanticThralls_BookAlreadyRead".Translate(p.Name);
-				return false;
+				return "ESCP_NecromanticThralls_BookAlreadyRead".Translate(p.Name);
 			}
-			return base.CanBeUsedBy(p, out failReason);
-		}
+            return true;
+        }
 	}
 }

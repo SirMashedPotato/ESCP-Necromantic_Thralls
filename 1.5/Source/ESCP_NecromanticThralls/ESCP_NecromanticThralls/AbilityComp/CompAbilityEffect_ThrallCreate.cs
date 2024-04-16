@@ -47,7 +47,7 @@ namespace ESCP_NecromanticThralls
                 ///I'm being lazy, but this works
                 try
                 {
-                    ResurrectionUtility.Resurrect(c.InnerPawn);
+                    ResurrectionUtility.TryResurrect(c.InnerPawn);
                 }
                 catch
                 {
@@ -59,7 +59,7 @@ namespace ESCP_NecromanticThralls
                     {
                         if (p.guest != null)
                         {
-                            p.guest.interactionMode = PrisonerInteractionModeDefOf.NoInteraction;
+                            p.guest = null;
                         }
                         RecruitUtility.Recruit(p, parent.pawn.Faction, parent.pawn);
                         if (p.Faction != parent.pawn.Faction)

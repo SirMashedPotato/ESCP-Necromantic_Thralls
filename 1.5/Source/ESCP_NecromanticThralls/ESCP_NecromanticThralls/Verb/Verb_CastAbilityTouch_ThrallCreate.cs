@@ -23,6 +23,12 @@ namespace ESCP_NecromanticThralls
                 {
                     return false;
                 }
+                /*
+                if (!ESCP_NecromanticThralls_ModSettings.ThrallCanEntity && c.InnerPawn.IsEntity)
+                {
+                    return false;
+                }
+                */
                 if (ThrallImmune.Get(c.InnerPawn.def) != null)
                 {
                     return false;

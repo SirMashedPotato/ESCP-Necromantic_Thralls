@@ -25,6 +25,7 @@ namespace ESCP_NecromanticThralls
 
     [HarmonyPatch(typeof(SituationalThoughtHandler))]
     [HarmonyPatch("AppendMoodThoughts")]
+    [HarmonyPatch(new Type[] { typeof(List<Thought>) })]
     public static class SituationalThoughtHandler_AppendMoodThoughts_Patch
     {
         [HarmonyPostfix]

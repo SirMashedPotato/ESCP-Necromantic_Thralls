@@ -150,7 +150,7 @@ namespace ESCP_NecromanticThralls
                 {
                     defaultLabel = "ESCP_NecromanticThralls_SelectAllThralls".Translate(),
                     icon = ContentFinder<Texture2D>.Get("UI/Gizmos/ESCP_NecromanticThralls_SelectAllThralls", true),
-                    disabled = thrallsList.Count <= 0,
+                    Disabled = thrallsList.Count <= 0,
                     onHover = delegate ()
                     {
                         ShowThralls();

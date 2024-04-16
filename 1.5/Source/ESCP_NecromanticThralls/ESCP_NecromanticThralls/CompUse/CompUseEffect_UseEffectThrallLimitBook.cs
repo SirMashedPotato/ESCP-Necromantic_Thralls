@@ -24,21 +24,19 @@ namespace ESCP_NecromanticThralls
 			parent.Destroy();
 		}
 
-		public override bool CanBeUsedBy(Pawn p, out string failReason)
-		{
+        public override AcceptanceReport CanBeUsedBy(Pawn p)
+        {
 			Hediff hediffStorage = p.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ESCP_NecromanticThralls_ThrallStorage);
 			if (hediffStorage == null)
 			{
-				failReason = "ESCP_NecromanticThralls_BookRequiresKnowledge".Translate(p.Name);
-				return false;
+                return "ESCP_NecromanticThralls_BookRequiresKnowledge".Translate(p.Name);
 			}
 			HediffComp_ThrallStorage compStorage = hediffStorage.TryGetComp<HediffComp_ThrallStorage>();
 			if (!compStorage.CanIncreaseThrallLimit())
 			{
-				failReason = "ESCP_NecromanticThralls_BookAlreadyRead".Translate(p.Name);
-				return false;
+                return "ESCP_NecromanticThralls_BookAlreadyRead".Translate(p.Name);
 			}
-			return base.CanBeUsedBy(p, out failReason);
-		}
+            return true;
+        }
 	}
 }
