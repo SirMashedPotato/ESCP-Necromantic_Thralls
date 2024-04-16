@@ -10,4 +10,12 @@
 		<li IfModActive="erdelf.HumanoidAlienRaces">1.4/Mods/AlienRaces</li>	
 		<li IfModActive="erdelf.HumanoidAlienRaces.dev">1.4/Mods/AlienRaces</li>
 	</v1.4>
+	<v1.5>
+		<li>Common</li>
+		<li>1.5</li>
+		<li IfModActive="Ludeon.RimWorld.Ideology">1.5/Mods/Ideology</li>
+		<li IfModActive="Ludeon.RimWorld.Biotech">1.5/Mods/Biotech</li>
+		<li IfModActive="OskarPotocki.VanillaFactionsExpanded.Core">1.5/Mods/VE_Framework</li>
+		<li IfModActive="erdelf.HumanoidAlienRaces,erdelf.HumanoidAlienRaces.dev">1.5/Mods/AlienRaces</li>	
+	</v1.5>
 </loadFolders>

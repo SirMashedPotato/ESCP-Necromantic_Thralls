@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{34BA53E1-2205-46B6-B9F6-D07952BA65AD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ESCP_NecromanticThralls</RootNamespace>
+    <AssemblyName>ESCP_NecromanticThralls</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\Assemblies\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony, Version=2.2.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Lib.Harmony.2.2.2\lib\net472\0Harmony.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>I:\Steam_Library\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine">
+      <HintPath>I:\Steam_Library\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>I:\Steam_Library\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>I:\Steam_Library\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>I:\Steam_Library\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="VFECore">
+      <HintPath>I:\Steam_Library\steamapps\workshop\content\294100\2023507013\1.4\Assemblies\VFECore.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AbilityComp\CompAbilityEffect_ThrallCreate.cs" />
+    <Compile Include="AbilityComp\Props\CompProperties_ThrallCreate.cs" />
+    <Compile Include="CompUse\CompUseEffects_UseEffectCorpseCasket.cs" />
+    <Compile Include="CompUse\CompUseEffect_UseEffectThrallBook.cs" />
+    <Compile Include="CompUse\CompUseEffect_UseEffectThrallLimitBook.cs" />
+    <Compile Include="CompUse\Props\CompProperties_UseEffectCorpseCasket.cs" />
+    <Compile Include="CompUse\Props\CompProperties_UseEffectThrallBook.cs" />
+    <Compile Include="CompUse\Props\CompProperties_UseEffectThrallLimitBook.cs" />
+    <Compile Include="DefOf\InteractionDefOf.cs" />
+    <Compile Include="DefOf\ThoughtDefOf.cs" />
+    <Compile Include="Gene\Gene_Necromancer.cs" />
+    <Compile Include="Gizmo\Gizmo_ThrallLimit.cs" />
+    <Compile Include="Gizmo\Gizmo_ThrallSever.cs" />
+    <Compile Include="Harmony\HarmonyInstance.cs" />
+    <Compile Include="Harmony\Thrall_Ageing.cs" />
+    <Compile Include="Harmony\Thrall_AnimalMating.cs" />
+    <Compile Include="Harmony\Thrall_Biotech.cs" />
+    <Compile Include="Harmony\Thrall_HediffGivers.cs" />
+    <Compile Include="Harmony\Thrall_Ideo.cs" />
+    <Compile Include="Harmony\Thrall_Inspirations.cs" />
+    <Compile Include="Harmony\Thrall_Interactions.cs" />
+    <Compile Include="Harmony\Thrall_MentalBreaks.cs" />
+    <Compile Include="Harmony\Thrall_NameColours.cs" />
+    <Compile Include="Harmony\Thrall_Needs.cs" />
+    <Compile Include="Harmony\Thrall_ResourceProduction.cs" />
+    <Compile Include="Harmony\Thrall_SkillLearning.cs" />
+    <Compile Include="Harmony\Thrall_Thoughts.cs" />
+    <Compile Include="Harmony\Thrall_Trading.cs" />
+    <Compile Include="Harmony\Thrall_Training.cs" />
+    <Compile Include="HediffComp\HediffComp_KillOnRemove.cs" />
+    <Compile Include="HediffComp\Props\HediffCompProperties_ThrallStorage.cs" />
+    <Compile Include="ModSettings\ESCP_NecromanticThralls_Mod.cs" />
+    <Compile Include="ModSettings\ESCP_NecromanticThralls_ModSettings.cs" />
+    <Compile Include="ThoughtWorker\ThoughtWorker_ThrallThought.cs" />
+    <Compile Include="Utility\DebugTools.cs" />
+    <Compile Include="DefModExtension\ThrallImmune.cs" />
+    <Compile Include="DefOf\HediffDefOf.cs" />
+    <Compile Include="HediffComp\HediffComp_Enthralled.cs" />
+    <Compile Include="HediffComp\HediffComp_ThrallStorage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utility\ThrallUtility.cs" />
+    <Compile Include="Verb\Verb_CastAbilityTouch_ThrallCreate.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
